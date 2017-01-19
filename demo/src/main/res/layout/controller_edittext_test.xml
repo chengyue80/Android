@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/controller_scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            
+
+            <EditText
+                android:id="@+id/edittext_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ems="10"
+                android:hint="请输入用户名数字"
+                android:padding="10dp"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:id="@+id/edittext_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ems="10"
+                android:hint="请输入密码数字"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="请输入邮箱"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="请输入电话"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:digits="0123"
+                android:hint="只能输入0123"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="多行文本"
+                android:minLines="3"
+                android:padding="10dp"
+                android:textColor="#ff0000" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:digits="0123"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:hint="带图片的"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#ff0000" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

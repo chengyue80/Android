@@ -1,0 +1,4 @@
+include ':IAF'
+include ':vitamio'
+include ':xunplayer'
+include ':demo'

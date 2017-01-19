@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Xunplayer</string>
+    <string name="load_complete">加载完成~</string>
+    <string name="player_loading">正在缓冲...</string>
+    <string name="player_path_error">视频地址无效~</string>
+    <string name="player_network_eror">网络不给力啊~</string>
+    <string name="player_complete">播放完成~</string>
+
+</resources>

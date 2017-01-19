@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:crazyit="http://schemas.android.com/apk/res/com.yue.android.demo"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 使用自定义组件，并指定属性资源中定义的属性 -->
+<!-- 
+    <com.yue.demo.res.AlphaImageView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:src="@drawable/aaa"
+        crazyit:duration="60000" /> -->
+
+</LinearLayout>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android基础</string>
+    <string name="app_id">563453a9</string>
+    <string name="action_settings">Settings</string>
+    <string name="spinner_province">请选择省份：</string>
+    <string name="spinner_city">请选择城市：</string>
+
+    <!-- 听写 -->
+    <string name="text_begin">请开始说话…</string>
+    <string name="text_upload_contacts">上传联系人</string>
+    <string name="text_upload_userwords">上传用户词表</string>
+    <string name="text_upload_success">上传成功</string>
+    <string name="text_userword_empty">词表下载失败或内容为空</string>
+    <string name="text_download_success">下载成功</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <string name="pref_title_iat_dwa">结果动态修正</string>
+
+    <!-- Controller 组件 -->
+    <string name="controller_main_btn1_txt">TextViewTestActivity</string>
+    <string name="controller_main_btn2_txt">ButtonTestActivity</string>
+    <string name="controller_main_btn3_txt">EditTextTestActivity</string>
+    <string name="controller_main_btn4_txt">ImageTestActivity</string>
+    <string name="controller_main_btn5_txt">CheckTestActivity</string>
+    <string name="controller_main_btn6_txt">ClockTestActivity</string>
+    <string name="controller_imageInfo">ImageInfo</string>
+    <string name="controller_alphaPlus">增加透明度</string>
+    <string name="controller_alphaDel">减少透明度</string>
+    <string name="controller_check_man">男</string>
+    <string name="controller_check_woman">女</string>
+    <string name="controller_check_notMan">非人类</string>
+    <string name="digitalClock">数字时钟</string>
+    <string name="controller_myweb"><a href="http://www.baidu.com">百度:http://www.baidu.com</a></string>
+
+    <!-- actionbar -->
+    <string name="red_title">红色</string>
+    <string name="blue_title">蓝色</string>
+    <string name="green_title">绿色</string>
+    <string name="font_size">字体大小</string>
+    <string name="font_color">字体颜色</string>
+    <string name="plain_item">普通菜单项</string>
+    <string name="font_10">10号字体</string>
+    <string name="font_12">12号字体</string>
+    <string name="font_14">14号字体</string>
+    <string name="font_16">16号字体</string>
+    <string name="font_18">18号字体</string>
+
+    <!-- 绘图入门 -->
+    <string name="circle">圆形</string>
+    <string name="square">正方形</string>
+    <string name="rect">长方形</string>
+    <string name="round_rect">圆角矩形</string>
+    <string name="oval">椭圆形</string>
+    <string name="triangle">三角形</string>
+    <string name="pentagon">五角形</string>
+
+    <!-- 手绘，handDraw -->
+    <string name="width_1">1像素</string>
+    <string name="width_3">3像素</string>
+    <string name="width_5">5像素</string>
+    <string name="color_red">红色</string>
+    <string name="color_green">绿色</string>
+    <string name="color_blue">蓝色</string>
+    <string name="color">画笔颜色</string>
+    <string name="width">画笔宽度</string>
+    <string name="blur">模糊效果</string>
+    <string name="emboss">浮雕效果</string>
+
+    <!-- 渲染测试 -->
+    <string name="bitmap">位图</string>
+    <string name="line">线性渐变</string>
+    <string name="radial">圆形渐变</string>
+    <string name="sweep">角度渐变</string>
+    <string name="composite">混合</string>
+
+    <!-- 天气预报 -->
+    <string name="btn_apply">查询</string>
+    <string name="text_hint">城市中文名</string>
+    <string name="province">省份</string>
+    <string name="city">城市</string>
+
+    <!-- 传感器模拟器 -->
+    <string name="orientation">方向传感器返回的值</string>
+    <string name="magnetic">磁场传感器返回的值</string>
+    <string name="temperature">温度传感器返回的值</string>
+    <string name="light">光传感器返回的值</string>
+    <string name="pressure">压力传感器返回的值</string>
+
+    <!-- 调用系统图片 -->
+    <string name="image_camera">拍照上传</string>
+    <string name="image_select">上传手机中的照片</string>
+    <string name="image_cancel">取消</string>
+
+    <!-- main -->
+    <string name="demo_main_name_ui">UI</string>
+    <string name="demo_main_title_ui">Android应用的界面编程</string>
+    <string name="demo_main_name_event">Event</string>
+    <string name="demo_main_title_event">Android的事件处理</string>
+    <string name="demo_main_name_activity">Activity And Fragment</string>
+    <string name="demo_main_title_activity">深入理解activity和fragment</string>
+    <string name="demo_main_name_intent">Intent</string>
+    <string name="demo_main_title_intent">使用Intent和intentfilter进行通信</string>
+    <string name="demo_main_name_res">Resource</string>
+    <string name="demo_main_title_res">Android应用资源</string>
+    <string name="demo_main_name_graphics">Graphics</string>
+    <string name="demo_main_title_graphics">图形与图像处理</string>
+    <string name="demo_main_name_io">Data And IO</string>
+    <string name="demo_main_title_io">android数据存储与io</string>
+    <string name="demo_main_name_provider">ContentProvider</string>
+    <string name="demo_main_title_provider">使用contentprovider实现数据共享</string>
+    <string name="demo_main_name_service">Service</string>
+    <string name="demo_main_title_service">Service与BroadcastReceiver</string>
+    <string name="demo_main_name_media">Media</string>
+    <string name="demo_main_title_media">多媒体应用开发</string>
+    <string name="demo_main_name_opengl">Opengl</string>
+    <string name="demo_main_title_opengl">opengl与3d应用开发</string>
+    <string name="demo_main_name_net">Net</string>
+    <string name="demo_main_title_net">Android网络应用</string>
+    <string name="demo_main_name_desktop">Desktop</string>
+    <string name="demo_main_title_desktop">管理Android手机桌面</string>
+    <string name="demo_main_name_sensor">Sensor</string>
+    <string name="demo_main_title_sensor">传感器开发</string>
+    <string name="demo_main_name_gps">GPS</string>
+    <string name="demo_main_title_gps">gps应用开发</string>
+    <string name="demo_main_name_link">疯狂连连看</string>
+    <string name="demo_main_title_link">游戏demo-疯狂连连看</string>
+    <string name="demo_main_name_notify">通知栏应用</string>
+    <string name="demo_main_title_notify">介绍各种通知栏的使用方法</string>
+    <string name="demo_main_name_other">other</string>
+    <string name="demo_main_title_other">Android其他使用</string>
+
+    <!-- com.yue.android.demo.ui -->
+    <string name="demo_ui_name_view">ViewDemo</string>
+    <string name="demo_ui_title_view">界面编程与（View）视图、UI组件</string>
+    <string name="demo_ui_name_dialog">DialogDemo</string>
+    <string name="demo_ui_title_dialog">Dialog对话框</string>
+    <string name="demo_ui_name_menu">MenuDemo</string>
+    <string name="demo_ui_title_menu">菜单</string>
+    <string name="demo_ui_name_actionbar">ActionBarDemo</string>
+    <string name="demo_ui_title_actionbar">导航菜单、活动条</string>
+    <string name="demo_ui_name_layout">LayoutDemo</string>
+    <string name="demo_ui_title_layout">UI组件-布局管理器</string>
+
+    <!-- com.yue.android.demo.ui.view -->
+    <string name="demo_ui_view_name_textview">TextViewDemo</string>
+    <string name="demo_ui_view_title_textview">UI组件-文本框</string>
+    <string name="demo_ui_view_name_edittext">EditTextDemo</string>
+    <string name="demo_ui_view_title_edittext">UI组件-编辑框</string>
+    <string name="demo_ui_view_name_imageview">ImageView</string>
+    <string name="demo_ui_view_title_imageview">UI组件-ImageView及其子类</string>
+    <string name="demo_ui_view_name_check">CheckDemo</string>
+    <string name="demo_ui_view_title_check">UI组件-选择框</string>
+    <string name="demo_ui_view_name_clock">ClockDemo</string>
+    <string name="demo_ui_view_title_clock">UI组件-时钟组件</string>
+    <string name="demo_ui_view_name_button">ButtonDemo</string>
+    <string name="demo_ui_view_title_button">UI组件-按钮</string>
+    <string name="demo_ui_view_name_expand">ExpandableListView</string>
+    <string name="demo_ui_view_title_expand">UI组件-可展开的列表组件</string>
+    <string name="demo_ui_view_name_spinner">SpinnerDemo</string>
+    <string name="demo_ui_view_title_spinner">UI组件-下拉选择框</string>
+    <string name="demo_ui_view_name_circle">CircleImageView</string>
+    <string name="demo_ui_view_title_circle">UI组件-自定义圆形ImageView图片</string>
+    <string name="demo_ui_view_name_pop">PopupDemo</string>
+    <string name="demo_ui_view_title_pop">PopupWindows使用</string>
+    <string name="demo_ui_view_name_touchImage">TouchImageViewActivity</string>
+    <string name="demo_ui_view_title_touchImage">android中手势操作图片的平移、缩放、旋转 </string>
+    <string name="demo_ui_view_name_webview">WebView选择本地图片</string>
+    <string name="demo_ui_view_title_webview">WebView选择本地图片，地理位置定位</string>
+
+    <!-- com.yue.android.demo.ui.layout -->
+    <string name="demo_ui_layout_name_table">TableLayoutDemo</string>
+    <string name="demo_ui_layout_title_table">布局管理器-表格布局</string>
+    <string name="demo_ui_layout_name_frame">FrameLayoutDemo</string>
+    <string name="demo_ui_layout_title_frame">布局管理器-帧布局</string>
+    <string name="demo_ui_layout_name_grid">GridLyoutDemo</string>
+    <string name="demo_ui_layout_title_grid">布局管理器-网格布局</string>
+
+    <!-- com.yue.android.demo.ui.actionbar -->
+
+    <string name="demo_ui_actionbar_name_bar">ActionBarDemo</string>
+    <string name="demo_ui_actionbar_title_bar">使用ActionBar显示菜单选项</string>
+    <string name="demo_ui_actionbar_name_view">Action View Demo</string>
+    <string name="demo_ui_actionbar_title_view">添加Action view</string>
+    <string name="demo_ui_actionbar_name_tab">ActionBar tab nav</string>
+    <string name="demo_ui_actionbar_title_tab">使用ActionBar结合Fragment实现Tab导航</string>
+    <string name="demo_ui_actionbar_name_tabswipebav">ActionBar_TabSwipeNav</string>
+    <string name="demo_ui_actionbar_title_tabswipebav">Android 3.0以前的fragment支持</string>
+    <string name="demo_ui_actionbar_name_drop">DropDownNav</string>
+    <string name="demo_ui_actionbar_title_drop">actionbar实现下拉式菜单导航</string>
+
+    <!-- com.yue.android.demo.event -->
+    <string name="demo_event_name_plantgame">PlantGameDemo</string>
+    <string name="demo_event_title_plantgame">控制飞机移动</string>
+    <string name="demo_event_name_sendsms">SendSms Demo</string>
+    <string name="demo_event_title_sendsms">短信监听</string>
+    <string name="demo_event_name_ball">重写onTouchEvent方法相应触摸屏事件</string>
+    <string name="demo_event_title_ball">通过回调实现跟随手指的小球demo</string>
+    <string name="demo_event_name_conf">Configuration Demo</string>
+    <string name="demo_event_title_conf">相应系统设置的事件</string>
+    <string name="demo_event_name_async">AsyncTask Demo</string>
+    <string name="demo_event_title_async">异步任务处理</string>
+
+    <!-- com.yue.android.demo.activity -->
+    <string name="demo_activity_name_expand">ExpandableListActivity Demo</string>
+    <string name="demo_activity_title_expand">ExpandableListActivity</string>
+    <string name="demo_activity_name_preference">PreferenceActivity Demo</string>
+    <string name="demo_activity_title_preference">用于相关配置 的Activity</string>
+    <string name="demo_activity_name_life">Lifecycle Demo</string>
+    <string name="demo_activity_title_life">Activity 生命周期</string>
+    <string name="demo_activity_name_select">SelectBookActivity Demo</string>
+    <string name="demo_activity_title_select">Activity 与Fragment结合</string>
+
+    <!-- com.yue.android.demo.intent -->
+    <string name="demo_intent_name_DataTypeAttr">DataTypeAttr Demo</string>
+    <string name="demo_intent_title_DataTypeAttr">Data、Type属性与intent-filter配置</string>
+    <string name="demo_intent_name_tab">Intent Tab Demo</string>
+    <string name="demo_intent_title_tab">使用intent创建Tab页面</string>
+
+    <!-- com.yue.demo.Res -->
+    <string name="demo_res_name_drawable">Drawable Demo</string>
+    <string name="demo_res_title_drawable">使用drawable资源</string>
+    <string name="demo_res_name_valueanim">ValueAnimator Demo</string>
+    <string name="demo_res_title_valueanim">属性动画：不断改变的背景色</string>
+    <string name="demo_res_name_layout">LayoutAnimations</string>
+    <string name="demo_res_title_layout">使用布局（layout）资源</string>
+    <string name="demo_res_name_xml">XmlRes Demo</string>
+    <string name="demo_res_title_xml">使用原始XML资源</string>
+    <string name="demo_res_name_attr">AttrRes Demo</string>
+    <string name="demo_res_title_attr">属性（attribute）资源</string>
+    <string name="demo_res_name_clip">ClipDtawable Demo</string>
+    <string name="demo_res_title_clip">属性（clipdrawable）资源</string>
+
+    <!-- com.yue.demo.graphics -->
+    <string name="demo_graphics_name_bitmap">BitmapTest</string>
+    <string name="demo_graphics_title_bitmap">bitmap和bitmapfactory</string>
+    <string name="demo_graphics_name_canvas">CanvasTest</string>
+    <string name="demo_graphics_title_canvas">Android 绘图基础 ：Canvas 和Paint的使用</string>
+    <string name="demo_graphics_name_path">PathTest</string>
+    <string name="demo_graphics_title_path">Path 类的使用</string>
+    <string name="demo_graphics_name_handdraw">HandDraw</string>
+    <string name="demo_graphics_title_handdraw">采用双缓冲实现画图板</string>
+    <string name="demo_graphics_name_pinBall">PinBall</string>
+    <string name="demo_graphics_title_pinBall">弹球游戏</string>
+    <string name="demo_graphics_name_matrix">MatrixTest</string>
+    <string name="demo_graphics_title_matrix">使用MatrixTest控制变换</string>
+    <string name="demo_graphics_name_moveback">MoveBack</string>
+    <string name="demo_graphics_title_moveback">移动游戏背景</string>
+    <string name="demo_graphics_name_wrap">WrapTest</string>
+    <string name="demo_graphics_title_wrap">使用drawBitmapMesh扭曲图像</string>
+    <string name="demo_graphics_name_shader">ShaderTest</string>
+    <string name="demo_graphics_title_shader">使用Shader填充图形</string>
+    <string name="demo_graphics_name_animationdrawable">AnimationDrawableTest</string>
+    <string name="demo_graphics_title_animationdrawable">逐帧动画</string>
+    <string name="demo_graphics_name_blast">Blast</string>
+    <string name="demo_graphics_title_blast">指定点爆炸</string>
+    <string name="demo_graphics_name_tweenanim">TweenAnimTest</string>
+    <string name="demo_graphics_title_tweenanim">补间动画</string>
+    <string name="demo_graphics_name_butterfly">ButterFly</string>
+    <string name="demo_graphics_title_butterfly">蝴蝶飞舞,逐帧动画与补间动画相结合</string>
+    <string name="demo_graphics_name_listviewtween">ListViewTween</string>
+    <string name="demo_graphics_title_listviewtween">自定义补间动画</string>
+    <string name="demo_graphics_name_animator">AnimatorTest</string>
+    <string name="demo_graphics_title_animator">小球下落</string>
+    <string name="demo_graphics_name_surfaceview">SurfaceViewTest</string>
+    <string name="demo_graphics_title_surfaceview">使用SurfaceView实现绘画</string>
+    <string name="demo_graphics_name_showwave">ShowWave</string>
+    <string name="demo_graphics_title_showwave">ShowWaVe</string>
+
+    <!-- com.yue.android.demo.io -->
+    <string name="demo_io_name_othersharepreference">OtherSharePreferencetest</string>
+    <string name="demo_io_title_othersharepreference">跨应用程序读取SharePreference信息</string>
+    <string name="demo_io_name_file">FileTest</string>
+    <string name="demo_io_title_file">openFileOutput 和 openFileInput</string>
+    <string name="demo_io_name_sdcard">SDCardTest</string>
+    <string name="demo_io_title_sdcard">SDcardTest</string>
+    <string name="demo_io_name_sdfileexplorer">SDFileExplorer</string>
+    <string name="demo_io_title_sdfileexplorer">SDcard 文件浏览器</string>
+    <string name="demo_io_name_dbtest">DBTest</string>
+    <string name="demo_io_title_dbtest">SQLite 数据库</string>
+    <string name="demo_io_name_dict">Dict</string>
+    <string name="demo_io_title_dict">英语单词表</string>
+    <string name="demo_io_name_gestrue">GestrueTest</string>
+    <string name="demo_io_title_gestrue">手势监测</string>
+    <string name="demo_io_name_addgestrue">AddGestrue</string>
+    <string name="demo_io_title_addgestrue">手势库载入增加</string>
+    <string name="demo_io_name_recogniseGestrue">RecogniseGestrue</string>
+    <string name="demo_io_title_recogniseGestrue">手势识别</string>
+    <string name="demo_io_name_speech">ReadSelf</string>
+    <string name="demo_io_title_speech">自动朗读</string>
+    <string name="demo_io_name_asset">AssetFileMove</string>
+    <string name="demo_io_title_asset">AssetFileMove</string>
+
+    <!-- com.yue.android.demo.content -->
+    <string name="demo_content_name_contentresolver">MyContentResolver</string>
+    <string name="demo_content_title_contentresolver">MyContentResolver</string>
+    <string name="demo_content_name_dictresolver">DictResolverTest</string>
+    <string name="demo_content_title_dictresolver">使用ContentProvider共享生词本数据</string>
+    <string name="demo_content_name_contact">ContactProviderTest</string>
+    <string name="demo_content_title_contact">使用contentprovider管理联系人,联系人需要存储在手机中</string>
+    <string name="demo_content_name_media">MediaProviderTest</string>
+    <string name="demo_content_title_media">使用contentprovider管理多媒体内容</string>
+    <string name="demo_content_name_monitorsms">MonitorSms</string>
+    <string name="demo_content_title_monitorsms">监听用户发出的短信</string>
+    <!--
+    String[] mActivity = { "", "SoundPool", "VideoViewTest",
+				"使用MediaRecorder录制视频", "VitamioDemo" };
+    -->
+    <!-- com.yue.android.demo.media -->
+    <string name="demo_media_name_mediaEffect">MediaPlayerTest</string>
+    <string name="demo_media_title_mediaEffect">音乐特效控制</string>
+    <string name="demo_media_name_soundpool">SoundPoolTest</string>
+    <string name="demo_media_title_soundpool">使用soundpool播放音效</string>
+    <string name="demo_media_name_videoview">VideoViewTest</string>
+    <string name="demo_media_title_videoview">使用VideoView播放视频</string>
+    <string name="demo_media_name_surfaceview">SurfaceViewPlayVideo</string>
+    <string name="demo_media_title_surfaceview">使用SurfaceView播放视频</string>
+    <string name="demo_media_name_mediarecorder">MediaRecorderTest</string>
+    <string name="demo_media_title_mediarecorder">使用MediaRecorder录制音频</string>
+    <string name="demo_media_name_camera">MyCameraActivity</string>
+    <string name="demo_media_title_camera">相机拍照</string>
+    <string name="demo_media_name_recordvideo">RecordVideo</string>
+    <string name="demo_media_title_recordvideo">使用MediaRecorder录制视频</string>
+    <string name="demo_media_name_vitamio">VitamioDemo</string>
+    <string name="demo_media_title_vitamio">集成Vitamio 播放视频</string>
+
+    <!-- com.yue.android.demo.other -->
+    <string name="demo_other_name_email">EmailActivity</string>
+    <string name="demo_other_title_email">邮件发送的相关操作</string>
+    <string name="demo_other_name_datePicker">TimePicker</string>
+    <string name="demo_other_title_datePicker">自定义日期选择框</string>
+    <string name="demo_other_name_upload">Upload</string>
+    <string name="demo_other_title_upload">图片上传</string>
+    <string name="demo_other_name_otherSharePreferencetest">OtherSharePreferencetest</string>
+    <string name="demo_other_title_otherSharePreferencetest">调用第三方应用sharepreference</string>
+    <string name="demo_other_name_resolution">ResolutionTest</string>
+    <string name="demo_other_title_resolution">Android系统分辨率</string>
+    <string name="demo_other_name_appinfo">AppInfo</string>
+    <string name="demo_other_title_appinfo">获取系统已安装应用信息</string>
+    <string name="demo_other_name_textviewAlign">TextViewAlignMent</string>
+    <string name="demo_other_title_textviewAlign">TextView文字对齐</string>
+    <string name="demo_other_name_popupWindows">PopupWindowTest</string>
+    <string name="demo_other_title_popupwindows">popup弹出框</string>
+    <string name="demo_other_name_broadcast">BroadcastActivity</string>
+    <string name="demo_other_title_broadcast">广播测试</string>
+    <string name="demo_other_name_encode">EncodeTest</string>
+    <string name="demo_other_title_encode">Encode编码</string>
+    <string name="demo_other_name_jsonTest">JsonTest</string>
+    <string name="demo_other_title_jsontest">JsonTest</string>
+    <string name="demo_other_name_jsonTestMsc">JsonTestMsc</string>
+    <string name="demo_other_title_jsonTestMsc">JsonTestMsc</string>
+    <string name="demo_other_name_notification">NotificationTest</string>
+    <string name="demo_other_title_notification">通知栏notification测试</string>
+    <string name="demo_other_name_install">InstallDemo</string>
+    <string name="demo_other_title_install">静默安装demo</string>
+    <string name="demo_other_name_topactivity">TopActivity</string>
+    <string name="demo_other_title_topactivity">topActivity</string>
+    <string name="demo_other_name_clearData">clearData</string>
+    <string name="demo_other_title_clearData">使用cmd命令清除数据</string>
+    <string name="demo_other_name_draggable">DraggableGridView</string>
+    <string name="demo_other_title_draggable">DraggableGridView Item可拖动交换位置的GridView，类似桌面的单屏效果</string>
+    <string name="demo_other_name_code">图形验证码</string>
+    <string name="demo_other_title_code">图形验证码</string>
+    <string name="demo_other_name_share">ShareSDK</string>
+    <string name="demo_other_title_share">ShareSDK分享</string>
+    <string name="demo_other_name_mdsha1">mdsha1</string>
+    <string name="demo_other_title_mdsha1">获取应用的MD5 和 sha1信息</string>
+    <string name="demo_other_name_speech">讯飞语音</string>
+    <string name="demo_other_title_speech">语音听写、语义理解</string>
+
+    <!-- com.yue.android.demo.net -->
+    <string name="demo_net_name_systemDownload">System download</string>
+    <string name="demo_net_title_systemDownload">调用系统方法下载apk</string>
+
+    <!-- 时间选择器日期 -->
+    <string-array name="time_picker_date">
+        <item>今天</item>
+        <item>明天</item>
+        <item>后天</item>
+    </string-array>
+
+    <!-- PhotoView -->
+    <string name="menu_zoom_enable">Enable Zoom</string>
+    <string name="menu_zoom_disable">Disable Zoom</string>
+    <string name="menu_scale_fit_center">Change to FIT_CENTER</string>
+    <string name="menu_scale_fit_start">Change to FIT_START</string>
+    <string name="menu_scale_fit_end">Change to FIT_END</string>
+    <string name="menu_scale_fit_xy">Change to FIT_XY</string>
+    <string name="menu_scale_center">Change to CENTER</string>
+    <string name="menu_scale_center_inside">Change to CENTER_INSIDE</string>
+    <string name="menu_scale_center_crop">Change to CENTER_CROP</string>
+    <string name="menu_zoom_random_animate">Animate scale to random value</string>
+    <string name="menu_zoom_random">Set scale to random value</string>
+    <string name="menu_matrix_restore">Restore Display Matrix</string>
+    <string name="menu_matrix_capture">Capture Display Matrix</string>
+    <string name="extract_visible_bitmap">Extract visible bitmap</string>
+    <string name="menu_lock">Lock</string>
+    <string name="menu_unlock">Unlock</string>
+
+    <!-- 2为前置两个空格 -->
+    <string name="countdowntimer">倒计时%1$2s秒</string>
+    <string name="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula sapien, fermentum vitae aliquam sed, lacinia in nibh. Pellentesque euismod diam eget justo interdum, sit amet elementum ipsum vulputate. Aliquam sed purus urna. Vivamus luctus nisi sem, a fringilla velit iaculis id. Donec nec vulputate justo. Fusce vulputate sodales tellus, in fringilla ante posuere non. Vivamus vulputate nisl non augue dignissim, consectetur rutrum risus facilisis. Sed consectetur aliquam dolor, sed pulvinar mi tristique vitae. Donec quis ligula quis velit consequat dictum id eu felis. Mauris ac congue ante, sed elementum eros.\n\nSed eu euismod dolor, a vestibulum lorem. Phasellus euismod volutpat risus sit amet pellentesque. Integer sit amet nisl malesuada, posuere orci sodales, euismod metus. Suspendisse potenti. Nullam mollis tristique accumsan. Vestibulum sit amet dictum nisl. Sed rhoncus lacus purus, vitae scelerisque urna venenatis at.\n\nUt ornare sapien sed condimentum varius. Nulla ut varius nibh. Nam consequat ligula sem, interdum hendrerit diam commodo sed. Vestibulum imperdiet mauris quis mauris vestibulum lobortis. Nunc bibendum, nunc ut porttitor tristique, turpis mauris cursus magna, ac molestie risus hendrerit odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras pulvinar odio vestibulum ligula mollis, vel venenatis orci semper. Duis consectetur molestie justo, ut pulvinar nisi semper vel. Cras quis fringilla augue, ut vehicula turpis. Praesent nec imperdiet dui. Morbi quis pharetra lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed luctus mauris vitae augue rhoncus, vel interdum nisl pellentesque. In tempor, mi et vestibulum condimentum, nisl mauris cursus diam, aliquet vestibulum risus erat sit amet diam.\n\nInteger suscipit eros at diam tempor, ac condimentum turpis pharetra. Vestibulum pharetra risus in lacus semper, at bibendum ligula condimentum. Proin sed massa eget risus malesuada dignissim et in ipsum. Donec convallis tellus vel lectus lobortis, non lobortis libero faucibus. Sed nec posuere mi. Pellentesque sed sem sit amet erat lobortis commodo nec ut nisl. Pellentesque rhoncus risus id massa accumsan, hendrerit posuere mauris pulvinar.\n\nNullam risus felis, dictum et varius eget, rutrum non nunc. Vestibulum lorem nulla, porttitor ac sapien interdum, porta tristique turpis. Quisque ut dui vitae urna congue scelerisque. Nulla eu commodo felis. Nulla aliquam magna a arcu elementum, vitae tincidunt risus semper. Sed consectetur diam vel magna mattis, sed congue nisi fringilla. Ut in facilisis elit. Etiam aliquet orci urna. Nam interdum nunc fringilla iaculis cursus.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula sapien, fermentum vitae aliquam sed, lacinia in nibh. Pellentesque euismod diam eget justo interdum, sit amet elementum ipsum vulputate. Aliquam sed purus urna. Vivamus luctus nisi sem, a fringilla velit iaculis id. Donec nec vulputate justo. Fusce vulputate sodales tellus, in fringilla ante posuere non. Vivamus vulputate nisl non augue dignissim, consectetur rutrum risus facilisis. Sed consectetur aliquam dolor, sed pulvinar mi tristique vitae. Donec quis ligula quis velit consequat dictum id eu felis. Mauris ac congue ante, sed elementum eros.\n\nSed eu euismod dolor, a vestibulum lorem. Phasellus euismod volutpat risus sit amet pellentesque. Integer sit amet nisl malesuada, posuere orci sodales, euismod metus. Suspendisse potenti. Nullam mollis tristique accumsan. Vestibulum sit amet dictum nisl. Sed rhoncus lacus purus, vitae scelerisque urna venenatis at.\n\nUt ornare sapien sed condimentum varius. Nulla ut varius nibh. Nam consequat ligula sem, interdum hendrerit diam commodo sed. Vestibulum imperdiet mauris quis mauris vestibulum lobortis. Nunc bibendum, nunc ut porttitor tristique, turpis mauris cursus magna, ac molestie risus hendrerit odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras pulvinar odio vestibulum ligula mollis, vel venenatis orci semper. Duis consectetur molestie justo, ut pulvinar nisi semper vel. Cras quis fringilla augue, ut vehicula turpis. Praesent nec imperdiet dui. Morbi quis pharetra lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed luctus mauris vitae augue rhoncus, vel interdum nisl pellentesque. In tempor, mi et vestibulum condimentum, nisl mauris cursus diam, aliquet vestibulum risus erat sit amet diam.\n\nInteger suscipit eros at diam tempor, ac condimentum turpis pharetra. Vestibulum pharetra risus in lacus semper, at bibendum ligula condimentum. Proin sed massa eget risus malesuada dignissim et in ipsum. Donec convallis tellus vel lectus lobortis, non lobortis libero faucibus. Sed nec posuere mi. Pellentesque sed sem sit amet erat lobortis commodo nec ut nisl. Pellentesque rhoncus risus id massa accumsan, hendrerit posuere mauris pulvinar.\n\nNullam risus felis, dictum et varius eget, rutrum non nunc. Vestibulum lorem nulla, porttitor ac sapien interdum, porta tristique turpis. Quisque ut dui vitae urna congue scelerisque. Nulla eu commodo felis. Nulla aliquam magna a arcu elementum, vitae tincidunt risus semper. Sed consectetur diam vel magna mattis, sed congue nisi fringilla. Ut in facilisis elit. Etiam aliquet orci urna. Nam interdum nunc fringilla iaculis cursus.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula sapien, fermentum vitae aliquam sed, lacinia in nibh. Pellentesque euismod diam eget justo interdum, sit amet elementum ipsum vulputate. Aliquam sed purus urna. Vivamus luctus nisi sem, a fringilla velit iaculis id. Donec nec vulputate justo. Fusce vulputate sodales tellus, in fringilla ante posuere non. Vivamus vulputate nisl non augue dignissim, consectetur rutrum risus facilisis. Sed consectetur aliquam dolor, sed pulvinar mi tristique vitae. Donec quis ligula quis velit consequat dictum id eu felis. Mauris ac congue ante, sed elementum eros.\n\nSed eu euismod dolor, a vestibulum lorem. Phasellus euismod volutpat risus sit amet pellentesque. Integer sit amet nisl malesuada, posuere orci sodales, euismod metus. Suspendisse potenti. Nullam mollis tristique accumsan. Vestibulum sit amet dictum nisl. Sed rhoncus lacus purus, vitae scelerisque urna venenatis at.\n\nUt ornare sapien sed condimentum varius. Nulla ut varius nibh. Nam consequat ligula sem, interdum hendrerit diam commodo sed. Vestibulum imperdiet mauris quis mauris vestibulum lobortis. Nunc bibendum, nunc ut porttitor tristique, turpis mauris cursus magna, ac molestie risus hendrerit odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras pulvinar odio vestibulum ligula mollis, vel venenatis orci semper. Duis consectetur molestie justo, ut pulvinar nisi semper vel. Cras quis fringilla augue, ut vehicula turpis. Praesent nec imperdiet dui. Morbi quis pharetra lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed luctus mauris vitae augue rhoncus, vel interdum nisl pellentesque. In tempor, mi et vestibulum condimentum, nisl mauris cursus diam, aliquet vestibulum risus erat sit amet diam.\n\nInteger suscipit eros at diam tempor, ac condimentum turpis pharetra. Vestibulum pharetra risus in lacus semper, at bibendum ligula condimentum. Proin sed massa eget risus malesuada dignissim et in ipsum. Donec convallis tellus vel lectus lobortis, non lobortis libero faucibus. Sed nec posuere mi. Pellentesque sed sem sit amet erat lobortis commodo nec ut nisl. Pellentesque rhoncus risus id massa accumsan, hendrerit posuere mauris pulvinar.\n\nNullam risus felis, dictum et varius eget, rutrum non nunc. Vestibulum lorem nulla, porttitor ac sapien interdum, porta tristique turpis. Quisque ut dui vitae urna congue scelerisque. Nulla eu commodo felis. Nulla aliquam magna a arcu elementum, vitae tincidunt risus semper. Sed consectetur diam vel magna mattis, sed congue nisi fringilla. Ut in facilisis elit. Etiam aliquet orci urna. Nam interdum nunc fringilla iaculis cursus.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula sapien, fermentum vitae aliquam sed, lacinia in nibh. Pellentesque euismod diam eget justo interdum, sit amet elementum ipsum vulputate. Aliquam sed purus urna. Vivamus luctus nisi sem, a fringilla velit iaculis id. Donec nec vulputate justo. Fusce vulputate sodales tellus, in fringilla ante posuere non. Vivamus vulputate nisl non augue dignissim, consectetur rutrum risus facilisis. Sed consectetur aliquam dolor, sed pulvinar mi tristique vitae. Donec quis ligula quis velit consequat dictum id eu felis. Mauris ac congue ante, sed elementum eros.\n\nSed eu euismod dolor, a vestibulum lorem. Phasellus euismod volutpat risus sit amet pellentesque. Integer sit amet nisl malesuada, posuere orci sodales, euismod metus. Suspendisse potenti. Nullam mollis tristique accumsan. Vestibulum sit amet dictum nisl. Sed rhoncus lacus purus, vitae scelerisque urna venenatis at.\n\nUt ornare sapien sed condimentum varius. Nulla ut varius nibh. Nam consequat ligula sem, interdum hendrerit diam commodo sed. Vestibulum imperdiet mauris quis mauris vestibulum lobortis. Nunc bibendum, nunc ut porttitor tristique, turpis mauris cursus magna, ac molestie risus hendrerit odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras pulvinar odio vestibulum ligula mollis, vel venenatis orci semper. Duis consectetur molestie justo, ut pulvinar nisi semper vel. Cras quis fringilla augue, ut vehicula turpis. Praesent nec imperdiet dui. Morbi quis pharetra lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed luctus mauris vitae augue rhoncus, vel interdum nisl pellentesque. In tempor, mi et vestibulum condimentum, nisl mauris cursus diam, aliquet vestibulum risus erat sit amet diam.\n\nInteger suscipit eros at diam tempor, ac condimentum turpis pharetra. Vestibulum pharetra risus in lacus semper, at bibendum ligula condimentum. Proin sed massa eget risus malesuada dignissim et in ipsum. Donec convallis tellus vel lectus lobortis, non lobortis libero faucibus. Sed nec posuere mi. Pellentesque sed sem sit amet erat lobortis commodo nec ut nisl. Pellentesque rhoncus risus id massa accumsan, hendrerit posuere mauris pulvinar.\n\nNullam risus felis, dictum et varius eget, rutrum non nunc. Vestibulum lorem nulla, porttitor ac sapien interdum, porta tristique turpis. Quisque ut dui vitae urna congue scelerisque. Nulla eu commodo felis. Nulla aliquam magna a arcu elementum, vitae tincidunt risus semper. Sed consectetur diam vel magna mattis, sed congue nisi fringilla. Ut in facilisis elit. Etiam aliquet orci urna. Nam interdum nunc fringilla iaculis cursus.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula sapien, fermentum vitae aliquam sed, lacinia in nibh. Pellentesque euismod diam eget justo interdum, sit amet elementum ipsum vulputate. Aliquam sed purus urna. Vivamus luctus nisi sem, a fringilla velit iaculis id. Donec nec vulputate justo. Fusce vulputate sodales tellus, in fringilla ante posuere non. Vivamus vulputate nisl non augue dignissim, consectetur rutrum risus facilisis. Sed consectetur aliquam dolor, sed pulvinar mi tristique vitae. Donec quis ligula quis velit consequat dictum id eu felis. Mauris ac congue ante, sed elementum eros.\n\nSed eu euismod dolor, a vestibulum lorem. Phasellus euismod volutpat risus sit amet pellentesque. Integer sit amet nisl malesuada, posuere orci sodales, euismod metus. Suspendisse potenti. Nullam mollis tristique accumsan. Vestibulum sit amet dictum nisl. Sed rhoncus lacus purus, vitae scelerisque urna venenatis at.\n\nUt ornare sapien sed condimentum varius. Nulla ut varius nibh. Nam consequat ligula sem, interdum hendrerit diam commodo sed. Vestibulum imperdiet mauris quis mauris vestibulum lobortis. Nunc bibendum, nunc ut porttitor tristique, turpis mauris cursus magna, ac molestie risus hendrerit odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras pulvinar odio vestibulum ligula mollis, vel venenatis orci semper. Duis consectetur molestie justo, ut pulvinar nisi semper vel. Cras quis fringilla augue, ut vehicula turpis. Praesent nec imperdiet dui. Morbi quis pharetra lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed luctus mauris vitae augue rhoncus, vel interdum nisl pellentesque. In tempor, mi et vestibulum condimentum, nisl mauris cursus diam, aliquet vestibulum risus erat sit amet diam.\n\nInteger suscipit eros at diam tempor, ac condimentum turpis pharetra. Vestibulum pharetra risus in lacus semper, at bibendum ligula condimentum. Proin sed massa eget risus malesuada dignissim et in ipsum. Donec convallis tellus vel lectus lobortis, non lobortis libero faucibus. Sed nec posuere mi. Pellentesque sed sem sit amet erat lobortis commodo nec ut nisl. Pellentesque rhoncus risus id massa accumsan, hendrerit posuere mauris pulvinar.\n\nNullam risus felis, dictum et varius eget, rutrum non nunc. Vestibulum lorem nulla, porttitor ac sapien interdum, porta tristique turpis. Quisque ut dui vitae urna congue scelerisque. Nulla eu commodo felis. Nulla aliquam magna a arcu elementum, vitae tincidunt risus semper. Sed consectetur diam vel magna mattis, sed congue nisi fringilla. Ut in facilisis elit. Etiam aliquet orci urna. Nam interdum nunc fringilla iaculis cursus.</string>
+    
+
+</resources>

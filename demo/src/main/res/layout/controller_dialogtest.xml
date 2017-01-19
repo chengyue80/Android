@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/dialog_simpleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="简单dialog" />
+
+    <Button
+        android:id="@+id/dialog_simpleListBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通列表对话框" />
+
+    <Button
+        android:id="@+id/dialog_singleChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="单选列表dialog" />
+
+    <Button
+        android:id="@+id/dialog_multiChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多选列表dialog" />
+
+    <Button
+        android:id="@+id/dialog_myAdapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义列表对话框" />
+
+    <Button
+        android:id="@+id/dialog_myDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义布局对话框" />
+
+    <Button
+        android:id="@+id/dialog_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="style设置" />
+    <Button
+        android:id="@+id/dialog_style1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="style设置1" />
+
+</LinearLayout>

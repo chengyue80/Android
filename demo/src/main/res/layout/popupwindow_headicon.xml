@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <View
+        android:id="@+id/spaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/pop_layout" />
+
+    <RelativeLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/popupwindow_headicon_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/popupwindow_headicon_btnCancel"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/select_pic_bg" >
+
+            <TextView
+                android:id="@+id/popupwindow_headicon_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/change_head_bzfamily"
+                android:gravity="center"
+                android:text="title"
+                android:textColor="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/popupwindow_headicon_btnCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/popupwindow_headicon_title"
+                android:background="@drawable/phone_upload_bzfamily"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="@string/image_camera"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/popupwindow_headicon_btnPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/popupwindow_headicon_btnCamera"
+                android:background="@drawable/upload_photo_bzfamily"
+                android:gravity="center"
+                android:text="@string/image_select"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/popupwindow_headicon_btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/spaceView2"
+            android:layout_margin="20dip"
+            android:background="@drawable/cancle_bzfamily"
+            android:gravity="center"
+            android:text="@string/image_cancel"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/spaceView2"
+            android:layout_width="match_parent"
+            android:layout_height="20dip"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

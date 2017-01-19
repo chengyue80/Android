@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="MediaController_Button">
+        <item name="android:background">@drawable/bg_mediacontroller_button</item>
+    </style>
+
+    <style name="MediaController_Button_Style">
+        <item name="android:background">@drawable/bg_title_button_player</item>
+    </style>
+
+</resources>

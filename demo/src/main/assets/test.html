@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="chengyue" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> Js调用Android </title>
+</head>
+
+<!-- 调用java方法 onload="javascript:window.myObject.Callfunction()"-->
+<body >
+<!-- 注意此处的myObject是Android暴露出来的对象 -->
+<input type="button" value="打招呼" 
+	onclick="myObject.showToast('孙悟空');" />
+<input type="button" value="图书列表" 
+	onclick="myObject.showList();" />
+
+	
+
+<div>
+<input type="file" name="image" accept="image/*">
+</div>
+
+<div>
+<input type="file" id="imageInput" multiple="multiple" accept="image/jpg" capture="camera" >
+</div>
+<div id="imagePreview"></div>
+
+<script language="javascript" type="text/javascript"> 
+
+<!-- 二维码扫描 -->
+function setScanResult(result){
+	var datalistdiv = document.getElementById("scan"); //得到页面的div
+
+	pnode = document.createElement("p");//创建一个p标签，再建个textnode
+
+	tnode = document.createTextNode(result);
+
+	pnode.appendChild(tnode);//p中加入数据
+
+	datalistdiv.appendChild(pnode);//div中键入新的p
+}
+
+<!-- 文件选择 -->
+function setPicture(result){
+
+	var datalistdiv = document.getElementById("pictureuri"); //得到页面的div
+
+	pnode = document.createElement("p");//创建一个p标签，再建个textnode
+
+	tnode = document.createTextNode(result);
+
+	pnode.appendChild(tnode);//p中加入数据
+
+	datalistdiv.appendChild(pnode);//div中键入新的p
+
+}
+
+
+<!-- 文件选择 -->
+function setUserData(result){
+
+	
+
+}
+function sayHello() {
+        alert("Hello")
+}
+
+function GetList(){
+
+	var i=window.myObject.getSize();
+
+	for(var n=0;n<i;n++){
+
+	var jsdata= window.myObject.getObject(n);//拿到activity里面的属性javadata
+
+	var datalistdiv = document.getElementById("datalist"); //得到页面的div
+
+	pnode = document.createElement("p");//创建一个p标签，再建个textnode
+
+	tnode = document.createTextNode(jsdata);
+
+	pnode.appendChild(tnode);//p中加入数据
+
+	datalistdiv.appendChild(pnode);//div中键入新的p
+
+	}
+
+}
+
+</script>
+
+<div id = "datalist">
+
+this is the java data : 
+
+</div>
+
+
+
+
+
+<!-- 图片选择 -->
+<div id = "pictureuri">
+	========================</br>
+	<input type="button" value="选择文件" onclick="myObject.getPicture();" /></br>
+	this is the picture uri :</br>
+</div>
+<!-- 图片选择 -->
+<div id = "pictureuri">
+	========================</br>
+	<input type="file" value="选择文件" onclick="myObject.getPicture();" /></br>
+	this is the picture uri1111 :</br>
+</div>
+
+<!-- 二维码扫描 -->
+<div id = "scan">
+	========================</br>
+	<input type="button" value="扫一扫" onclick="myObject.scanCode();" />
+	</br>
+	the scan result is :</br>
+
+
+</div>
+
+<div id = "getUserinfo">
+	========================</br>
+	<input type="button" value="扫一扫" onclick="myObject.getUserData();" />
+	</br>
+	the scan result is :</br>
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="key_width">200dp</dimen>
+    <dimen name="myapp_height">65dp</dimen>
+    <dimen name="myapp_width">65dp</dimen>
+    <dimen name="up_down_height">70dp</dimen>
+    <dimen name="up_down_width">120dp</dimen>
+    <dimen name="left_right_height">150dp</dimen>
+    <dimen name="left_right_width">80dp</dimen>
+    <dimen name="function_height">70dp</dimen>
+    <dimen name="btn_applist_width">125dp</dimen>
+    <dimen name="btn_mic_width_height">80dp</dimen>
+    <dimen name="base_padding">16dp</dimen>
+
+    <!-- 天气预报 -->
+    <dimen name="picSize">40dp</dimen>
+    <dimen name="weather_txt_size">12sp</dimen>
+    <dimen name="weather_temp_txt_size">30sp</dimen>
+    <dimen name="weather_temp_txt_detial_size">12sp</dimen>
+    <dimen name="weather_temp_spaceview_weight">110dp</dimen>
+    <dimen name="weather_temp_perTempSpace">10dp</dimen>
+    <dimen name="ui_10_dip">10dip</dimen>
+    <dimen name="marginleft">10dp</dimen>
+    <dimen name="margintop">10dp</dimen>
+
+    <!-- 字体大小 -->
+
+    <dimen name="font_size_xx_small">32px</dimen>
+    <dimen name="font_size_x_small">40px</dimen>
+    <dimen name="font_size_small_30">30px</dimen>
+    <dimen name="font_size_small_40">40px</dimen>
+    <dimen name="font_size_small_44">44px</dimen>
+    <dimen name="font_size_small">45px</dimen>
+    <dimen name="font_size_small1">48px</dimen>
+    <dimen name="font_size_medium_50">50px</dimen>
+    <dimen name="font_size_medium">54px</dimen>
+    <dimen name="font_size_s_large">60px</dimen>
+    <dimen name="font_size_large">63px</dimen>
+    <dimen name="font_size_x_large">72px</dimen>
+    <dimen name="font_size_x_large1">84px</dimen>
+    <dimen name="font_size_xx_large">90px</dimen>
+    <dimen name="font_size_xxx_large">100px</dimen>
+    <dimen name="font_size_xxxx_large">124px</dimen>
+    <dimen name="font_size_xxxxx_large">144px</dimen>
+
+    <!-- 时间选择器：滚轮行高 -->
+    <dimen name="wheel_line_split_height">45px</dimen>
+
+</resources>

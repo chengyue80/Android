@@ -1,0 +1,151 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From AndroidDemo:
+* .DS_Store
+* .gitignore
+* README.md
+* ic_launcher-web.png
+* proguard-project.txt
+* 说明.docx
+From IAF:
+* .DS_Store
+* README.md
+* checkstyle.xml
+* pom.xml
+From Vitamio:
+* .DS_Store
+* README.md
+* build.xml
+From Xunplayer:
+* .DS_Store
+* build.xml
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:20.0.0
+gson-2.3.1.jar => com.google.code.gson:gson:2.3.1
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In IAF:
+* AndroidManifest.xml => IAF/src/main/AndroidManifest.xml
+* assets/ => IAF/src/main/assets
+* libs/ => IAF/src/main/java/
+* libs/universal-image-loader-1.9.1.jar => IAF/libs/universal-image-loader-1.9.1.jar
+* res/ => IAF/src/main/res/
+* src/main/java/ => IAF/src/main/java/
+* src/test/java/ => IAF/src/main/java/
+In Vitamio:
+* AndroidManifest.xml => Vitamio/src/main/AndroidManifest.xml
+* assets/ => Vitamio/src/main/assets
+* libs/armeabi-v7a/libvinit.so => Vitamio/src/main/jniLibs/armeabi-v7a/libvinit.so
+* libs/armeabi/libvinit.so => Vitamio/src/main/jniLibs/armeabi/libvinit.so
+* res/ => Vitamio/src/main/res/
+* src/ => Vitamio/src/main/java/
+* src/.DS_Store => Vitamio/src/main/resources/.DS_Store
+* src/io/.DS_Store => Vitamio/src/main/resources/io/.DS_Store
+* src/io/vov/.DS_Store => Vitamio/src/main/resources/io/vov/.DS_Store
+* src/io/vov/vitamio/.DS_Store => Vitamio/src/main/resources/io/vov/vitamio/.DS_Store
+In Xunplayer:
+* AndroidManifest.xml => Xunplayer/src/main/AndroidManifest.xml
+* assets/ => Xunplayer/src/main/assets
+* res/ => Xunplayer/src/main/res/
+* src/ => Xunplayer/src/main/java/
+In AndroidDemo:
+* AndroidManifest.xml => AndroidDemo/src/main/AndroidManifest.xml
+* assets/ => AndroidDemo/src/main/assets/
+* libs/BaiduLBS_Android.jar => AndroidDemo/libs/BaiduLBS_Android.jar
+* libs/DraggableGridView.jar => AndroidDemo/libs/DraggableGridView.jar
+* libs/MobCommons.jar => AndroidDemo/libs/MobCommons.jar
+* libs/MobTools.jar => AndroidDemo/libs/MobTools.jar
+* libs/Msc.jar => AndroidDemo/libs/Msc.jar
+* libs/ShareSDK-Alipay-2.6.4.jar => AndroidDemo/libs/ShareSDK-Alipay-2.6.4.jar
+* libs/ShareSDK-Core-2.6.4.jar => AndroidDemo/libs/ShareSDK-Core-2.6.4.jar
+* libs/ShareSDK-Email-2.6.4.jar => AndroidDemo/libs/ShareSDK-Email-2.6.4.jar
+* libs/ShareSDK-QQ-2.6.4.jar => AndroidDemo/libs/ShareSDK-QQ-2.6.4.jar
+* libs/ShareSDK-QZone-2.6.4.jar => AndroidDemo/libs/ShareSDK-QZone-2.6.4.jar
+* libs/ShareSDK-ShortMessage-2.6.4.jar => AndroidDemo/libs/ShareSDK-ShortMessage-2.6.4.jar
+* libs/ShareSDK-SinaWeibo-2.6.4.jar => AndroidDemo/libs/ShareSDK-SinaWeibo-2.6.4.jar
+* libs/ShareSDK-TencentWeibo-2.6.4.jar => AndroidDemo/libs/ShareSDK-TencentWeibo-2.6.4.jar
+* libs/ShareSDK-Wechat-2.6.4.jar => AndroidDemo/libs/ShareSDK-Wechat-2.6.4.jar
+* libs/ShareSDK-Wechat-Core-2.6.4.jar => AndroidDemo/libs/ShareSDK-Wechat-Core-2.6.4.jar
+* libs/ShareSDK-Wechat-Favorite-2.6.4.jar => AndroidDemo/libs/ShareSDK-Wechat-Favorite-2.6.4.jar
+* libs/ShareSDK-Wechat-Moments-2.6.4.jar => AndroidDemo/libs/ShareSDK-Wechat-Moments-2.6.4.jar
+* libs/Sunflower.jar => AndroidDemo/libs/Sunflower.jar
+* libs/ant.jar => AndroidDemo/libs/ant.jar
+* libs/armeabi-v7a/libBaiduMapSDK_v3_5_0_31.so => AndroidDemo/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_v3_5_0_31.so
+* libs/armeabi-v7a/liblocSDK5.so => AndroidDemo/src/main/jniLibs/armeabi-v7a/liblocSDK5.so
+* libs/armeabi-v7a/libmsc.so => AndroidDemo/src/main/jniLibs/armeabi-v7a/libmsc.so
+* libs/armeabi-v7a/libzbar.so => AndroidDemo/src/main/jniLibs/armeabi-v7a/libzbar.so
+* libs/armeabi/libBaiduMapSDK_v3_3_0_15.so => AndroidDemo/src/main/jniLibs/armeabi/libBaiduMapSDK_v3_3_0_15.so
+* libs/armeabi/libcwatchdog.so => AndroidDemo/src/main/jniLibs/armeabi/libcwatchdog.so
+* libs/armeabi/libmsc.so => AndroidDemo/src/main/jniLibs/armeabi/libmsc.so
+* libs/armeabi/libzbar.so => AndroidDemo/src/main/jniLibs/armeabi/libzbar.so
+* libs/bcprov-jdk16-1.46.jar => AndroidDemo/libs/bcprov-jdk16-1.46.jar
+* libs/core.jar => AndroidDemo/libs/core.jar
+* libs/datetime.jar => AndroidDemo/libs/datetime.jar
+* libs/ifly_push_sdk_1.0_1044.jar => AndroidDemo/libs/ifly_push_sdk_1.0_1044.jar
+* libs/javase.jar => AndroidDemo/libs/javase.jar
+* libs/ksoap2-android-assembly-3.0.0-RC.4-jar-with-dependencies.jar => AndroidDemo/libs/ksoap2-android-assembly-3.0.0-RC.4-jar-with-dependencies.jar
+* libs/photoviewlib.jar => AndroidDemo/libs/photoviewlib.jar
+* libs/sun.misc.BASE64Decoder.jar => AndroidDemo/libs/sun.misc.BASE64Decoder.jar
+* libs/universal-image-loader-1.9.1.jar => AndroidDemo/libs/universal-image-loader-1.9.1.jar
+* res/ => AndroidDemo/src/main/res/
+* src/ => AndroidDemo/src/main/java/
+* src/.DS_Store => AndroidDemo/src/main/resources/.DS_Store
+* src/.define => AndroidDemo/src/main/resources/.define
+* src/android/telephony/NeighboringCellInfo.aidl => AndroidDemo/src/main/aidl/android/telephony/NeighboringCellInfo.aidl
+* src/com/android/internal/telephony/ITelephony.aidl => AndroidDemo/src/main/aidl/com/android/internal/telephony/ITelephony.aidl
+* src/com/iflytek/android/framework/sdk/ISdk.aidl => AndroidDemo/src/main/aidl/com/iflytek/android/framework/sdk/ISdk.aidl
+* src/com/yue/demo/.DS_Store => AndroidDemo/src/main/resources/com/yue/demo/.DS_Store
+* src/com/yue/demo/activity/Activity的加载模式.txt => AndroidDemo/src/main/resources/com/yue/demo/activity/Activity的加载模式.txt
+* src/com/yue/demo/other/draggable.rdoc => AndroidDemo/src/main/resources/com/yue/demo/other/draggable.rdoc
+* src/com/yue/demo/ui/.DS_Store => AndroidDemo/src/main/resources/com/yue/demo/ui/.DS_Store
+* src/org/yue/test/service/aidl/ICat.aidl => AndroidDemo/src/main/aidl/org/yue/test/service/aidl/ICat.aidl
+* src/org/yue/test/service/aidl/IPet.aidl => AndroidDemo/src/main/aidl/org/yue/test/service/aidl/IPet.aidl
+* src/org/yue/test/service/aidl/Person.aidl => AndroidDemo/src/main/aidl/org/yue/test/service/aidl/Person.aidl
+* src/org/yue/test/service/aidl/Pet.aidl => AndroidDemo/src/main/aidl/org/yue/test/service/aidl/Pet.aidl
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

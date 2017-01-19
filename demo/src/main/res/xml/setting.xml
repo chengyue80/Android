@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="sounds"
+        android:summaryOff="播放声音:关闭"
+        android:summaryOn="播放声音:开启"
+        android:title="是否播放声音" >
+    </CheckBoxPreference>
+
+    <EditTextPreference
+        android:defaultValue="15"
+        android:digits="0123456789"
+        android:inputType="phone"
+        android:key="warning_time"
+        android:summary="报警"
+        android:title="报警" >
+    </EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="0"
+        android:digits="0123456789"
+        android:inputType="phone"
+        android:key="unlimited_participants"
+        android:summary="参加人数"
+        android:title="参加人数" >
+    </EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="0"
+        android:digits="0123456789"
+        android:inputType="phone"
+        android:key="variable_meeting_length"
+        android:summary="会议时间(分钟)"
+        android:title="会议时间" >
+    </EditTextPreference>
+
+</PreferenceScreen>

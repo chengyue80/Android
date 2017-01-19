@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.yue.demo">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 全局dialog权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 添加操作闪光灯的权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <!-- 添加操作振动器的权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 添加发送短信的权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <!-- 添加读取短信的权限 -->
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <!-- 添加写短信的权限 -->
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <!-- 添加开机广播的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- 授予读联系人ContentProvider读的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- 授予写联系人ContentProvider写的权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <!-- 添加读取手机信息、状态的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 添加访问手机位置的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 添加接打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 添加修改壁纸的权限 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <!-- 授予程序接收短信的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <!-- 授予程序使用摄像头的权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 添加快捷方式的权限 -->
+    <!-- 指定添加安装快捷方式的权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- 百度地图 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <!-- VitamioDemo -->
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" /> -->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- ShareSDK 权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:name="com.yue.demo.base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- 移动统计分析 -->
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="'563453a9'"/>
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="Android_Demo"/>
+        <!-- app入口 -->
+        <activity
+            android:name="com.yue.demo.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zbar.lib.CaptureActivity"
+            android:label="扫一扫">
+        </activity>
+        ˚
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="IE5Pk1ZiIk15NmRxccUbNlN8"/>
+
+        <!-- 添加activity信息（注意：tencent后面的appid要保持和您配置的QQ的appid一致） -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 调用新浪原生SDK，需要注册的回调activity -->
+        <activity
+            android:name="cn.sharesdk.sina.weibo.SinaActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 支付宝分享回调 -->
+        <activity
+            android:name=".apshare.ShareEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- other activity -->
+        <activity
+            android:name="com.yue.demo.other.MainActivity_other"
+            android:label="MainActivity_other">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.EmailActivity"
+            android:label="EmailActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.photoupload.Upload"
+            android:label="Upload">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.ResolutionTest"
+            android:label="Dip_pxTest">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.appInfo.AppInfo"
+            android:label="AppInfo">
+        </activity>
+        <activity
+            android:name="com.yue.demo.res.textView_test.TextViewActivity"
+            android:label="TextViewActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.popwindows.ShowPopupWindow"
+            android:label="ShowPopupWindow">
+        </activity>
+        <activity
+            android:name="com.yue.demo.broadcast.BroadCastActivity"
+            android:label="@string/demo_other_name_broadcast">
+        </activity>
+
+        <service android:name="com.yue.demo.broadcast.CounterService">
+        </service>
+        <activity
+            android:name="com.yue.demo.jsontest.JsonTest"
+            android:label="@string/demo_other_name_jsonTest">
+        </activity>
+        <activity android:name="com.yue.demo.jsontest.JsonTestMsc">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.NotificationTest"
+            android:label="NotificationTest"
+            android:launchMode="singleInstance">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.InstallTest"
+            android:label="InstallTest">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.TopActvityTest"
+            android:label="@string/demo_other_name_topactivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.ClearDataDemo"
+            android:label="@string/demo_other_name_clearData">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.DraggableGridViewSampleActivity"
+            android:label="@string/demo_other_name_draggable">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.ValidateCodeActivity"
+            android:label="@string/demo_other_name_code">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.ShareActivity"
+            android:label="@string/demo_other_name_share">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.MDSha1Demo"
+            android:label="@string/demo_other_name_mdsha1">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.IatDemo"
+            android:label="@string/demo_other_name_speech">
+        </activity>
+
+        <!-- UI -->
+        <activity
+            android:name="com.yue.demo.ui.MainActivity_UI"
+            android:label="MainActivity_UI">
+        </activity>
+        <!-- UI : View -->
+        <activity
+            android:name="com.yue.demo.ui.view.WebViewUploadPic"
+            android:label="@string/demo_ui_view_name_webview">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.MainActivity_View"
+            android:label="MainActivity_Controller">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.ExpandableListViewTest"
+            android:label="ExpandableListViewTest">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.SpinnerTest"
+            android:label="SpinnerTest">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.ButtonTestActivity"
+            android:label="ButtonTestActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.CheckTestActivity"
+            android:label="CheckTestActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.ClockTestActivity"
+            android:label="ClockTestActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.EditTextTestActivity"
+            android:label="EditTextTestActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.ImageTestActivity"
+            android:label="ImageTestActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.TextViewTestActivity"
+            android:label="TextViewTestActivity"
+            android:theme="@style/FullBleedTheme">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.CircleViewActivity"
+            android:label="@string/demo_ui_view_name_circle">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.PopupDemo"
+            android:label="@string/demo_ui_view_name_pop">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.view.TouchImageViewActivity"
+            android:label="@string/demo_ui_view_name_touchImage">
+        </activity>
+
+        <!-- UI : Dialog -->
+        <activity
+            android:name="com.yue.demo.ui.dialog.MainActivity_Dialog"
+            android:label="Dialog_MainActivity">
+        </activity>
+        <!-- UI : Menu -->
+        <activity
+            android:name="com.yue.demo.ui.menu.MenuTest"
+            android:label="MenuTest">
+        </activity>
+        <!-- UI : ActionBar -->
+        <activity
+            android:name="com.yue.demo.ui.actionbar.MainActivity_ActionBar"
+            android:label="MainActivity_ActionBar"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.actionbar.ActionBarTest"
+            android:label="ActionBarTest"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.actionbar.ActionViewTest"
+            android:label="ActionHomeTest">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.actionbar.ActionBar_TabNav"
+            android:label="ActionBar_TabNav">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.actionbar.ActionBar_TabSwipeNav"
+            android:label="ActionBar_TabSwipeNav">
+        </activity>
+        <activity
+            android:name="com.yue.demo.ui.actionbar.ActionBar_DropDownNav"
+            android:label="ActionBar_DropDownNav">
+        </activity>
+
+        <!-- Layout -->
+        <activity
+            android:name="com.yue.demo.ui.layout.MainActivity_Layout"
+            android:label="MainActivity_Layout"/>
+        <activity
+            android:name="com.yue.demo.ui.layout.TableLayoutActivity"
+            android:label="TableLayoutActivity"/>
+        <activity
+            android:name="com.yue.demo.ui.layout.FrameLayout"
+            android:label="FrameLayout"/>
+        <activity
+            android:name="com.yue.demo.ui.layout.GridLayoutTest"
+            android:label="GridLayout"/>
+
+        <!-- Android事件处理 -->
+        <activity android:name="com.yue.demo.event.MainActivity_Event">
+        </activity>
+        <activity
+            android:name="com.yue.demo.event.PlantGame"
+            android:label="@string/demo_event_name_plantgame"
+            android:windowSoftInputMode="stateVisible|adjustPan">
+        </activity>
+        <activity android:name="com.yue.demo.event.SendSmsActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.event.BallActivity"
+            android:label="@string/demo_event_name_ball">
+        </activity>
+        <activity
+            android:name="com.yue.demo.event.ConfigurationTest"
+            android:label="@string/demo_event_name_conf">
+        </activity>
+        <activity
+            android:name="com.yue.demo.event.AsyncTaskTest"
+            android:label="@string/demo_event_name_async">
+        </activity>
+        <!-- 深入了解activity与fragment -->
+        <activity
+            android:name="com.yue.demo.activity.MainActivity_Activity"
+            android:label="@string/demo_main_name_activity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.activity.ExpandableListActivityTest"
+            android:label="ExpandableListActivityTest">
+        </activity>
+        <activity
+            android:name="com.yue.demo.activity.PreferenceActivityTest"
+            android:label="PreferenceActivityTest">
+        </activity>
+        <activity
+            android:name="com.yue.demo.activity.Lifecycle"
+            android:label="Lifecycle"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name="com.yue.demo.activity.ActivityForResult"
+            android:label="ActivityForResult">
+        </activity>
+        <activity
+            android:name="com.yue.demo.activity.SelectBookActivity"
+            android:label="SelectBookActivity">
+        </activity>
+
+        <!-- 使用intent 和 intentfilter 进行通信 -->
+        <activity
+            android:name="com.yue.demo.intent.MainActivity_Intent"
+            android:label="@string/demo_main_name_intent">
+        </activity>
+        <activity
+            android:name="com.yue.demo.intent.DataTypeAttr"
+            android:label="@string/demo_intent_name_DataTypeAttr">
+        </activity>
+        <activity
+            android:name="com.yue.demo.intent.SchemeActivity"
+            android:label="SchemeActivity">
+            <intent-filter>
+                <action android:name="com.yue.demo.intent.SchemeActivity">
+                    <category android:name="android.intent.category.DEFAULT"/>
+                    <!--
+                需要Intent的Data属性的scheme是lee、且host是www.fkjava.org 、
+                port是8888、且path是/mypath、且type是abc/xyz才可启动该Activity
+                    -->
+                    <!--
+                    android:host="www.fkjava.org"
+                    android:mimeType="abc/xyz"
+                    android:path="/mypath"
+                    android:port="8888"
+                    -->
+                    <data android:scheme="lee"/>
+                </action>
+                >
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yue.demo.intent.IntentTab"
+            android:label="IntentTab">
+        </activity>
+
+        <!-- android 应用的资源 -->
+
+        <activity
+            android:name="com.yue.demo.res.MainActivity_Res"
+            android:label="@string/demo_main_name_res">
+        </activity>
+        <activity
+            android:name="com.yue.demo.res.DrawableTest"
+            android:label="@string/demo_res_name_drawable">
+        </activity>
+        <activity
+            android:name="com.yue.demo.res.ValueAnimatorTest"
+            android:label="@string/demo_res_name_valueanim">
+        </activity>
+        <activity
+            android:name="com.yue.demo.res.LayoutAnimations"
+            android:label="@string/demo_res_name_layout">
+        </activity>
+        <activity
+            android:name="com.yue.demo.res.XmlResTest"
+            android:label="@string/demo_res_name_xml">
+        </activity>
+        <activity
+            android:name="com.yue.demo.res.AttrResTest"
+            android:label="@string/demo_res_name_attr">
+        </activity>
+        <activity
+            android:name="com.yue.demo.res.ClipDrawableDemo"
+            android:label="@string/demo_res_name_clip">
+        </activity>
+
+        <!-- 图形与图像处理 -->
+        <activity
+            android:name="com.yue.demo.graphics.MainActivity_Graphics"
+            android:label="@string/demo_main_name_graphics">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.BitmapTest"
+            android:label="@string/demo_graphics_name_bitmap">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.CanvasTest"
+            android:label="@string/demo_graphics_name_canvas">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.PathTest"
+            android:label="@string/demo_graphics_name_path">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.HandDraw"
+            android:label="@string/demo_graphics_name_handdraw">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.PinBall"
+            android:label="@string/demo_graphics_name_pinBall">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.MoveBack"
+            android:label="@string/demo_graphics_name_moveback">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.MatrixTest"
+            android:label="@string/demo_graphics_name_matrix"
+            android:windowSoftInputMode="stateVisible|stateAlwaysVisible">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.WrapTest"
+            android:label="@string/demo_graphics_name_wrap">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.ShaderTest"
+            android:label="@string/demo_graphics_name_shader">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.AnimationDrawableTest"
+            android:label="@string/demo_graphics_name_animationdrawable">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.Blast"
+            android:label="@string/demo_graphics_name_blast">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.TweenAnimTest"
+            android:label="@string/demo_graphics_name_tweenanim">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.Butterfly"
+            android:label="@string/demo_graphics_name_butterfly">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.ListViewTween"
+            android:label="@string/demo_graphics_name_listviewtween">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.AnimatorTest"
+            android:label="@string/demo_graphics_name_animator">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.SurfaceViewTest"
+            android:label="@string/demo_graphics_name_surfaceview">
+        </activity>
+        <activity
+            android:name="com.yue.demo.graphics.ShowWaVe"
+            android:label="@string/demo_graphics_name_showwave">
+        </activity>
+
+        <!-- Android 数据存储与IO -->
+        <activity
+            android:name="com.yue.demo.io.MainActivity_IO"
+            android:label="@string/demo_main_name_io">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.OtherSharePreferencetest"
+            android:label="@string/demo_io_name_othersharepreference">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.FileTest"
+            android:label="@string/demo_io_name_file">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.SDCardTest"
+            android:label="@string/demo_io_name_sdcard">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.SDFileExplorer"
+            android:label="@string/demo_io_name_sdfileexplorer">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.DBTest"
+            android:label="@string/demo_io_name_dbtest">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.Dict"
+            android:label="@string/demo_io_name_dict">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.GestrueTest"
+            android:label="@string/demo_io_name_gestrue">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.AddGestrue"
+            android:label="@string/demo_io_name_addgestrue">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.RecogniseGestrue"
+            android:label="@string/demo_io_name_recogniseGestrue">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.Speech"
+            android:label="@string/demo_io_name_speech">
+        </activity>
+        <activity
+            android:name="com.yue.demo.io.AssetDemo"
+            android:label="@string/demo_io_name_asset">
+        </activity>
+
+        <!-- 使用ContentProvider实现数据共享 -->
+        <activity
+            android:name="com.yue.demo.content.MainActivity_Provider"
+            android:label="@string/demo_main_name_provider">
+        </activity>
+        <!--
+        <provider
+            android:name="com.yue.demo.content.provider.MyProvider"
+            android:authorities="org.yue.providers.myprovider"
+            android:exported="true" >
+        </provider>
+        <provider
+            android:name="com.yue.demo.content.provider.DictProvider"
+            android:authorities="org.yue.providers.dictprovider"
+            android:exported="true" />
+        -->
+
+        <activity
+            android:name="com.yue.demo.content.MyContentResolver"
+            android:label="@string/demo_content_name_contentresolver">
+        </activity>
+        <activity
+            android:name="com.yue.demo.content.DictResolverTest"
+            android:label="@string/demo_content_name_dictresolver">
+        </activity>
+        <activity
+            android:name="com.yue.demo.content.ContactProviderTest"
+            android:label="@string/demo_content_name_contact">
+        </activity>
+        <activity
+            android:name="com.yue.demo.content.MediaProviderTest"
+            android:hardwareAccelerated="false"
+            android:label="@string/demo_content_name_media">
+        </activity>
+        <activity
+            android:name="com.yue.demo.content.Monitor"
+            android:label="@string/demo_content_name_monitorsms">
+        </activity>
+
+        <!-- Service与broadcastreceive -->
+        <activity
+            android:name="com.yue.demo.service.MainActivity_Service"
+            android:label="Service与broadcastreceive">
+        </activity>
+
+        <!-- 配置一个Service组件 -->
+        <service android:name="com.yue.demo.service.BindService">
+            <intent-filter>
+
+                <!-- 为该Service组件的intent-filter配置action -->
+                <action android:name="com.yue.demo.service.BIND_SERVICE"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.yue.demo.service.BindServiceActivity"
+            android:label="BindServiceActivity">
+        </activity>
+        <activity
+            android:name="com.yue.demo.service.IntentServiceTest"
+            android:label="IntentService测试">
+        </activity>
+
+        <service android:name="com.yue.demo.service.MyService"/>
+
+        <!--<service android:name="com.yue.demo.service.MyIntentService" />-->
+
+        <activity
+            android:name="com.yue.demo.service.aidl.AidlClient"
+            android:label="调用远程Service">
+        </activity>
+        <service android:name="com.yue.demo.service.aidl.AidlService" >
+            <intent-filter>
+                <action android:name="com.yue.demo.action.AIDL_SERVICE" />
+            </intent-filter>
+        </service>
+        <activity
+            android:name="com.yue.demo.service.aidl.ComplexClient"
+            android:label="ComplexClient">
+        </activity>
+        <activity
+            android:name="com.yue.demo.service.TelehonyStatus"
+            android:label="获取网络和SIM卡信息">
+        </activity>
+        <activity
+            android:name="com.yue.demo.service.SmsManagerTest"
+            android:label="短信管理">
+        </activity>
+        <activity
+            android:name="com.yue.demo.service.AudioManagerTest"
+            android:label="音频管理器、振动器">
+        </activity>
+        <activity
+            android:name="com.yue.demo.service.AlarmManagerTest"
+            android:label="手机闹钟服务">
+        </activity>
+        <activity
+            android:name="com.yue.demo.service.AlarmActivity"
+            android:label="手机闹钟服务">
+        </activity>
+        <activity
+            android:name="com.yue.demo.service.AlarmChangeWallpaper"
+            android:label="AlarmChangeWallpaper">
+        </activity>
+
+        <service android:name="com.yue.demo.service.ChangeService"/>
+
+        <activity
+            android:name="com.yue.demo.service.broadcast.BroadcastTest"
+            android:label="广播测试">
+        </activity>
+
+        <receiver
+            android:name="com.yue.demo.service.broadcast.MyReceive"
+            android:exported="false">
+            <intent-filter android:priority="20">
+                <action android:name="org.yue.test.broadcast.action.MYRECEIVE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.yue.demo.service.MusicBox"
+            android:label="播放器">
+        </activity>
+        <activity
+            android:name="com.yue.demo.service.MusicList"
+            android:label="播放器">
+        </activity>
+
+        <service android:name="com.yue.demo.service.MusicService">
+        </service>
+
+        <receiver android:name="com.yue.demo.service.broadcast.SmsReceiver">
+            <intent-filter android:priority="800">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.yue.demo.service.broadcast.BatteryReceiver">
+
+            <!-- 监听电池电量改变 -->
+            <intent-filter android:priority="80000">
+                <action android:name="android.intent.action.BATTERY_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <!-- 多媒体应用开发 -->
+        <activity
+            android:name="com.yue.demo.media.MainActivity_Media"
+            android:label="多媒体应用开发"/>
+        <activity
+            android:name="com.yue.demo.media.MediaPlayerTest"
+            android:label="音乐特效控制"/>
+        <activity
+            android:name="com.yue.demo.media.SoundPoolTest"
+            android:label="SoundPool"/>
+        <activity
+            android:name="com.yue.demo.media.VideoViewTest"
+            android:label="VideoViewTest"/>
+        <activity
+            android:name="com.yue.demo.media.SurfaceViewPlayVideo"
+            android:label="SurfaceViewPlayVideo"/>
+        <activity
+            android:name="com.yue.demo.media.MediaRecorderTest"
+            android:label="使用MediaRecorder录制音频"/>
+        <activity
+            android:name="com.yue.demo.media.MyCameraActivity"
+            android:label="调用系统相机"/>
+        <activity
+            android:name="com.yue.demo.media.CaptureImage"
+            android:label="拍照时自动对焦"/>
+        <activity
+            android:name="com.yue.demo.media.RecordVideo"
+            android:label="使用MediaRecorder录制视频"/>
+        <activity
+            android:name="com.yue.demo.media.VitamioDemo"
+            android:label="VitamioDemo"/>
+
+        <!-- VitamioDemo 写入配置 -->
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name="com.wxcily.xunplayer.player.ui.VideoActivity"
+            android:launchMode="singleTask"
+            android:process=":vitamio"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"/>
+
+        <service
+            android:name="com.wxcily.xunplayer.player.VideoService"
+            android:process=":vitamio"/>
+
+        <!-- opengl 与3D应用开发 -->
+        <activity
+            android:name="com.yue.demo.opengl.Mainactivity_Opengl"
+            android:label="opengl与3D应用开发"/>
+        <activity
+            android:name="com.yue.demo.opengl.Polygon"
+            android:label="绘制2d图形"/>
+
+        <!-- android 网络应用 -->
+        <activity
+            android:name="com.yue.demo.net.MainActivity_Net"
+            android:label="@string/demo_main_name_net"/>
+        <activity
+            android:name="com.yue.demo.net.SimpleClient"
+            android:label="SimpleClient"/>
+        <activity
+            android:name="com.yue.demo.net.MultiThreadClient"
+            android:label="加入多线程"/>
+        <activity
+            android:name="com.yue.demo.net.URLTest"
+            android:label="使用URL读取网络资源"/>
+        <activity
+            android:name="com.yue.demo.net.GetPostMain"
+            android:label="使用url connection提交请求"/>
+        <activity
+            android:name="com.yue.demo.net.HttpClientTest"
+            android:label="访问被保护的资源"/>
+        <activity
+            android:name="com.yue.demo.net.multidown.MultiThreadDown"
+            android:label="多线程下载"/>
+        <activity
+            android:name="com.yue.demo.net.ViewHtml"
+            android:label="ViewHtml"/>
+        <activity
+            android:name="com.yue.demo.net.JsCallAndroid"
+            android:label="JsCallAndroid"/>
+        <activity
+            android:name="com.yue.demo.net.CallWs"
+            android:label="基于CXF的Web Service"/>
+        <activity
+            android:name="com.yue.demo.net.weather.MyWeather"
+            android:label="天气预报"/>
+        <activity
+            android:name="com.yue.demo.net.SyetemDownlaod"
+            android:label="@string/demo_net_name_systemDownload"/>
+
+        <receiver
+            android:name="com.yue.demo.net.CompleteReceiver"
+            android:label="@string/demo_net_name_systemDownload">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.yue.demo.net.weather.WeatherActivity"
+            android:label="WeatherActivity"/>
+        <activity
+            android:name="com.yue.demo.desktop.MainActivity_Desktop"
+            android:label="MainActivity_Desktop"/>
+        <!-- 配置实时壁纸Service -->
+        <service
+            android:name="com.yue.demo.desktop.LiveWallpaper"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WALLPAPER">
+
+            <!-- 为实时壁纸配置intent-filter -->
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+            </intent-filter>
+            <!-- 为实时壁纸配置meta-data -->
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/livewallpaper"/>
+        </service>
+
+        <activity
+            android:name="com.yue.demo.desktop.AddShortCut"
+            android:label="添加桌面快捷方式"/>
+
+        <receiver
+            android:name="com.yue.demo.desktop.DesktopApp"
+            android:label="@string/app_name">
+
+            <!-- 将该BroadcastReceiver当成桌面控件 -->
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <!-- 指定桌面控件的meta-data -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider"/>
+        </receiver>
+        <receiver
+            android:name="com.yue.demo.desktop.LedClock"
+            android:label="@string/app_name">
+
+            <!-- 将该BroadcastReceiver当成桌面控件 -->
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <!-- 指定桌面控件的meta-data -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_clock"/>
+        </receiver>
+        <receiver
+            android:name="com.yue.demo.desktop.StackWidgetProvider"
+            android:label="@string/app_name">
+
+            <!-- 将该BroadcastReceiver当成桌面控件 -->
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <!-- 指定桌面控件的meta-data -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/stackwidgetinfo"/>
+        </receiver>
+
+        <!-- 配置RemoteViewsService必须指定权限为android.permission.BIND_REMOTEVIEWS -->
+        <service
+            android:name="com.yue.demo.desktop.StackWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+
+        <!-- 传感器应用开发 -->
+        <activity
+            android:name="com.yue.demo.sensor.MainActivity_Sensor"
+            android:label="传感器应用开发">
+        </activity>
+        <activity
+            android:name="com.yue.demo.sensor.AccelerometerTest"
+            android:label="加速传感器">
+        </activity>
+        <activity
+            android:name="com.yue.demo.sensor.SensorTest"
+            android:label="传感器模拟器">
+        </activity>
+        <activity
+            android:name="com.yue.demo.sensor.Compass"
+            android:label="指南针">
+        </activity>
+        <activity
+            android:name="com.yue.demo.sensor.Gradienter"
+            android:label="水平仪">
+        </activity>
+
+        <!-- gps 应用开发 -->
+        <activity
+            android:name="com.yue.demo.gps.MainActivity_GPS"
+            android:label="gps 应用开发">
+        </activity>
+        <activity
+            android:name="com.yue.demo.gps.AllProvidersTest"
+            android:label="获取所有LocationProvider">
+        </activity>
+        <activity
+            android:name="com.yue.demo.gps.FreeProvidersTest"
+            android:label="根据Ctrteria获取LocationProvider">
+        </activity>
+        <activity
+            android:name="com.yue.demo.gps.LocationTest"
+            android:label="根据定位数据">
+        </activity>
+        <activity
+            android:name="com.yue.demo.gps.ProximityTest"
+            android:label="根据定位数据">
+        </activity>
+        <activity
+            android:name="com.yue.demo.link.Link"
+            android:label="疯狂连连看"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+        </activity>
+
+        <receiver android:name="com.yue.demo.gps.ProximityAlertReciever">
+        </receiver>
+
+        <!-- 百度地图 -->
+        <activity
+            android:name="com.baidu.demo.MainActivity_Baidu"
+            android:label="百度地图demo">
+        </activity>
+        <activity
+            android:name="com.baidu.map.MainActivity_Map"
+            android:label="百度地图"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+        </activity>
+
+        <service android:name="com.yue.demo.service.AllService">
+        </service>
+    </application>
+
+</manifest>

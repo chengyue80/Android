@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>市长热线</title>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.0.css">
+	<link rel="stylesheet" type="text/css" href="../css/rating_simple.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/pageui.js"></script>
+	<!--兼容IE9以下html5的支持-->
+	<script type="text/javascript" src="../js/html5.js"></script>
+</head>
+<body>
+	
+	<!--************************************我的12345******************************************-->
+	<div data-role="page" id="my" >
+		<header class="appTop">
+			<div class="hLeft"><a href="../index.html" data-ajax="false"><i class="hBtn icoBack"></i></a></div>
+			<div class="hRight"><a href="tel:12345" data-ajax="false"><i class="hBtn icoTel"></i></a></div>
+			<h1>我的12345</h1>
+		</header>
+		<div class="appTopfixH"></div>
+		<article class="appBody">
+			<ul class="rows appList2" id="showlist">
+		    	<li style="display:none">
+		            <h4 class="listTitle">
+		            	<div class="unitName"></div>
+		            	<a href="#" onclick="" id="title"></a>
+		            </h4>
+		            <div class="listOther clearfix">
+		            	<p id="fromtime"></p>
+		            	<span class="gdzt1" id="status"></span>
+		            </div>
+		        </li>
+		    </ul>
+		</article>
+		 <div class="loadMore"><a href="#" onclick="sljList()" id="loadingOne" ></a></div>
+			<div class="message" id="message1" style="display:none;" >
+		    	您没有受理件或受理件正在审核。
+		    </div>
+		    <div class="message" id="message2" style="display:none;" >
+		    	<!--您还未登录，请<a href="login.html" data-ajax="false" >登录</a>。-->
+		    </div>
+		</div>
+		<input id="globalNum" type="hidden" value="1"  />
+	</div>
+
+
+	<!--***************************************我的12345详情页******************************************-->
+	<div data-role="page" id="myDetail" class="appbody" >
+		<header class="appTop">
+			<div class="hLeft"><a href="my.html"><i class="hBtn icoBack"></i></a></div>
+			<div class="hRight"><a href="tel:12345"><i class="hBtn icoTel"></i></a></div>
+			<h1>12345市长热线</h1>
+		</header>
+			<div class="appTopfixH"></div>
+				<article class="appBody">
+				<div class="itemTop"><h4>基本信息</h4></div>
+		    <div class="itemBody">
+		    	<div class="title"><h3 id="sljtitle"></h3></div>
+		        <div class="content" id="sljcontent">
+		        </div>
+		        <div class="other clearfix">
+		        	<p id="name">骆驼祥子</p><span id="ftime">2014-01-01</span>
+		        </div>
+		    </div>
+			<div class="itemTop" id="handle"><h4>办理信息</h4></div>
+		    <div class="itemBody" id="handlediv">
+		        <div class="content">
+		        </div>
+		        <div class="other clearfix" >
+		       		<p id="handleunit"></p><span id="handlecontent">2013-11-03 10:03:43</span>
+		        </div>
+		    </div>
+		    <div class="itemBody" id="handlediv2" style="display:none;">
+		        <div class="content">
+		        您的信件正在处理中...
+		        </div>
+		    </div>
+			<div class="itemTop"  id="pjdiv1"><h4>评价信息</h4></div>
+				    <div class="itemBody"  id="pjdiv2">
+				        <div class="content">
+				        	<textarea placeholder="请输入评价内容" class="pjWrite" id="pjcontent"></textarea>
+				        </div>
+				        <div class="other clearfix">
+					        <p><input name="my_input" value="3" id="sat" type="hidden"></p>
+					        <input id="sljId" name="sljId" value="" type="hidden">
+					        <span class="rating_resultText"></span>
+				        </div>
+		    		</div>
+			</article>
+			<div class="appFooter"  id="pjdiv3">
+			<a class="fBtn submit" href="#" onclick="saveEvaluate()">提交</a>
+			</div>
+			<div class="appFooterfixH"></div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery.mobile-1.4.2.min.js" ></script>
+<script type="text/javascript" src="../js/custom-jqm-defaults.js" ></script>
+<script type="text/javascript" src="../js/common.js" ></script>
+<script type="text/javascript" src="../js/requestdata.js" ></script>
+<script type="text/javascript" src="../js/cordova.js" ></script>
+<script type="text/javascript" src="../js/global.js" ></script>
+<script type="text/javascript">
+
+var userloginTel;
+function getUserInfo(){
+	cordova(success,null,"UserService","getUserInfo",["abb51d434015fabc91009d7364bb79f7"]);
+}
+
+function success(userInfo){
+	userloginTel=userInfo.phoneNumber;
+	if(userloginTel==''||userloginTel=='undefined'||userloginTel==null){
+			alert('程序异常,请重新登录！');
+			window.location.href='../index.html';
+		}
+}
+	//星星评价
+	$(function() {
+		$("#sat").webwidget_rating_simple({
+			rating_star_length: '3',
+			rating_initial_value: '2',
+			rating_function_name: '',//this is function name for click
+			rating_texts:['不满意','满意','非常满意'],
+			//directory: 'img/'
+		});
+		getUserInfo();
+	});
+	
+	
+	var myShowNum = "";
+	//页面创建时加载数据
+	$(document).on("pagecreate","#my",function(){
+		var global = $("#globalNum").val();
+		if(global==1){
+			sljList();
+		}
+		$("#globalNum").val(2);
+	});
+	
+	//页面创建时，pageNumber 设置为 1
+	$(document).on("pagecreate","#my",function(){
+		pageNumber = 1;
+	});
+
+	//我的的受理件列表
+	function sljList(){
+		$("#message1").hide();
+		$("#message2").hide();
+		//var name = localStorage.getItem("loginName");
+		if(true){
+			request.mySlj(pageNumber,userloginTel,function(array){
+				var $_ul = $("#showlist");
+				var $_li = $("#showlist").find("li:first");
+				if(array!=null&&array.obj.rows.length>0){
+					$(array.obj.rows).each(function(index,obj){
+						var $_newLi = $_li.clone();
+						var zt = obj.zt;
+		    			if(zt!=null&&zt.length>10){
+		    				zt = zt.substring(0,10);
+		    				zt += "...";
+		    			}
+		    			if(zt==null||zt==""){
+		    				zt="无标题";
+		    			}
+						$_newLi.find("#title").text(zt);
+						$_newLi.find("#unitName").text(obj.handleunit);
+						$_newLi.find("#fromtime").text(obj.fromtime);
+						var status=getstatus(obj.letterstate);
+						$_newLi.find("#status").text(status);
+						if(obj.letterstate=="3"){
+							$_newLi.find("#status").attr("class","gdzt4");
+						}else if(obj.letterstate=="9"){
+							$_newLi.find("#status").attr("class","gdzt3");
+						}else if(obj.letterstate=="1"){
+							$_newLi.find("#status").attr("class","gdzt2");
+						}
+						$_newLi.find("a").attr("onclick","goDetail('"+obj.id+"','myDetail')");
+						$_newLi.show();
+						$_ul.append($_newLi);
+					});
+					$("#loadingOne").text("点击加载更多");
+				}else{
+					if(pageNumber==1){
+						$("#message1").show();
+	    			}else{
+	    				$("#loadingOne").text("全部加载完毕");
+	    			}
+				}
+			},function(e){
+				alert(e);
+			},function(){
+	    		showLoader();
+	    	},function(){
+	    		hideLoader();
+	    		pageNumber = pageNumber + 1;
+	    	});
+		}else{
+			//$("#message2").show();
+		}
+	}
+	
+//加载详情数据
+	$(document).on("pageshow","#myDetail",function(){
+		maininfo(myShowNum);
+	});
+//详细信息
+	function maininfo(id){
+		request.sljinfo(id,function(model){
+			var zt = model.obj.zt;
+			if(zt==null||zt==""){
+				zt="无标题";
+			}
+			if(zt.length>10){
+				zt = zt.substring(0,10);
+				zt += "...";
+			}
+			
+			$("#sljtitle").text(zt);
+			$("#ftime").text(model.obj.fromtime);
+			$("#sljcontent").html(model.obj.letternote);
+			$("#name").text(model.obj.name);
+			if(model.flag3.handleobj==null){
+				$("#handlediv").hide();
+				$("#handlediv2").show();
+				$("#pjdiv1").hide();
+				$("#pjdiv2").hide();
+				$("#pjdiv3").hide();
+				
+			}else{
+				$("#handlediv").show();
+				$("#handlediv2").hide();
+				//评价信息
+				if(model.flag1==null||model.flag1==0){
+					$("#pjdiv1").show();
+					$("#pjdiv2").show();
+					$("#pjdiv3").show();
+				}else{
+						$("#pjdiv1").hide();
+						$("#pjdiv2").hide();
+						$("#pjdiv3").hide();
+				}
+				$("#pjcontent").text("");
+				$("#handlediv").find("div").eq(0).text(model.flag3.handleobj.handlenote);
+				$("#handlediv").find("div").eq(1).find("p").text(model.flag3.unit);
+				$("#handlediv").find("div").eq(1).find("span").text(model.flag3.handleobj.handledate);
+				$("#sljId").val(model.obj.id);
+			}
+			
+		},function(e){
+			alert("程序异常，稍后重试");
+		});
+	}
+
+
+	//保存评价内容
+	function saveEvaluate(){
+		if($("#pjcontent").text()==""){
+			drawToast("请填写评价内容");
+			return false;
+		}
+		var dataObj = {
+				sat:$("#sat").val(),
+				pjly:1,
+				content:$("#pjcontent").text(),
+				sljId:$("#sljId").val()
+				};
+		request.saveEvaluate(dataObj,function(model){
+			drawToast(model.msg);
+			if (model.result==1) {
+				setTimeout(function(){
+					$.mobile.changePage("#myDetail",{transition:"none"});
+				},2000);
+			}
+		},function(e){
+			alert(e);
+		});
+
+	}
+
+	//去详情页
+	function goDetail(id,htmlName){
+		myShowNum = id;
+		$.mobile.changePage("#"+htmlName,{transition:"none"});
+	}
+	//信件状态
+	function getstatus(stats){
+		//－1代表草稿-2 评价不满意0 代表新建1代表办理中2代表反馈3代表办结4代表回收站(非完成删除，可再次转为处理状态)
+		//5代表呈批6代表退回（督办员退给受理员）7代表处理中-3表示单位申请回退给督办8代表延期9直办办结10升级为纪委监察
+		var status="";
+		if(stats=="-1"){status="草稿";}
+		else if(stats=="-2"){status="评价不满意";}
+		else if(stats=="-3"){status="单位申请回退给督办";}
+		else if(stats=="0"){status="新建";}
+		else if(stats=="1"){status="办理中";}
+		else if(stats=="2"){status="反馈";}
+		else if(stats=="3"){status="办结";}
+		else if(stats=="4"){status="回收站";}
+		else if(stats=="5"){status="呈批";}
+		else if(stats=="6"){status="退回";}
+		else if(stats=="7"){status="处理中";}
+		else if(stats=="8"){status="延期";}
+		else if(stats=="9"){status="直办";}
+		else if(stats=="10"){status="两次负面评价";}
+		else if(stats=="11"){status="纪委监察";}
+		else if(stats=="12"){status="已反馈纪委";}
+		else if(stats=="13"){status="纪委办结";}
+		else if(stats=="14"){status="纪委回收";}
+		else if(stats=="15"){status="纪委呈批";}
+		else if(stats=="16"){status="退回纪委";}
+		else if(stats=="17"){status="纪委处理中";}
+		else if(stats=="18"){status="纪委延期";}
+		else if(stats=="19"){status="纪委直办";}
+		else if(stats=="20"){status="纪委待处理";}
+		else if(stats=="21"){status="纪委回退";}
+		else if(stats=="22"){status="待研究";}
+		else if(stats=="23"){status="研究办结";}
+		return status;
+	}
+	
+</script>
+</html>

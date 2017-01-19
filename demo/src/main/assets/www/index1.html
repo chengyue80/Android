@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta  charset="utf-8"/>
+        <title>PhoneGap</title>
+        <script type="text/javascript" charset="utf-8" src="cordova.android.js"></script>
+         <script type="text/javascript" charset="utf-8" src="main.js"></script>
+         <script>
+         
+  
+         
+         function getUserInfo(){
+         alert("getUserInfo");
+        	  cordova.exec(success, null, "UserService", "getUserInfo", [ "appid", "", 42,
+         false ]);
+         }
+       
+		 function success(userInfo){
+		 alert(111);
+		 var userinfo = JSON.stringify(userInfo);
+		 alert("获取的用户信息为" + userinfo);
+		 }
+          </script>
+    </head>
+    <body>
+        <h1 id="h">这是我的 phoneGap 第一个界面 </h1>
+        <button onclick="getUserInfo();">2222222</button>
+    </body>
+
+</html>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ScrollView
+        android:id="@+id/controller_scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio0"
+                    style="@style/radioButton"
+                    android:checked="true"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    style="@style/radioButton"
+                    android:checked="false"
+                    android:text="RadioButton" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="#000000"
+                android:text="layout_margin"
+                android:textColor="#ff0000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:padding="20sp"
+                android:text="padding"
+                android:textColor="#ff0000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="1sp"
+                android:background="#000000"
+                android:padding="1sp"
+                android:singleLine="true"
+                android:text="singleLine   singleLine   b  singleLine"
+                android:textColor="#ff0000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/controller_txtmarquee"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:background="#000000"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="2"
+                android:padding="1sp"
+                android:singleLine="true"
+                android:text="跑马灯效果，循环次数 跑马灯效果，循环次数跑循环次数跑马灯效果，循环次数======"
+                android:textColor="#ff0000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/controller_textView1"
+                style="@style/myTxt_Style"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="focusable" />
+
+            <TextView
+                style="@style/myTxt_Style"
+                android:text="style:123456" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3sp"
+                android:autoLink="phone"
+                android:background="#000000"
+                android:padding="3sp"
+                android:text="phone:18055150837"
+                android:textColor="#ff0000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3sp"
+                android:autoLink="email"
+                android:background="#000000"
+                android:padding="1px"
+                android:text="ppok21@163.com"
+                android:textColor="#ff0000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/txtweb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:text="@string/controller_myweb"
+                android:textColor="#ff0000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:shadowColor="#0000ff"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowRadius="3"
+                android:text="测试阴影"
+                android:textColor="#ff0000"
+                android:textSize="50sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

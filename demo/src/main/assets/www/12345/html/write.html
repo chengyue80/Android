@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新办件</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/pageui.js"></script>
+<!--兼容IE9以下html5的支持-->
+<script type="text/javascript" src="../js/html5.js"></script>
+<script type="text/javascript">
+
+var userloginTel;
+function getUserInfo(){
+	cordova(success,null,"UserService","getUserInfo",["abb51d434015fabc91009d7364bb79f7"]);
+}
+
+function success(userInfo){
+	userloginTel=userInfo.phoneNumber;
+	if(userloginTel==''||userloginTel=='undefined'||userloginTel==null){
+			alert('程序异常,请重新登录！');
+			window.location.href='../index.html';
+		}else{
+			$('#linktel').val(userloginTel);
+		}
+}
+
+	$(function(){
+		getUserInfo();
+	});
+	
+	//用户确认修改
+	function doSave(){
+		if(form1.name.value==undefined||form1.name.value==''){
+			alert("姓名不能为空");
+			return;
+		}
+		if(form1.sex.value==undefined||form1.sex.value==''){
+			alert("请选择您的性别");
+			return;
+		}
+		if(form1.opentype.value==undefined||form1.opentype.value==''){
+			alert("请选择是否公开");
+			return;
+		}
+		if(form1.zt.value==undefined||form1.zt.value==''){
+			alert("主题不能为空!");
+			return;
+		}
+		if(form1.letternote.value==undefined||form1.letternote.value==''){
+			alert("内容不能为空!");
+			return;
+		}else{
+			if(form1.letternote.value.length>1000){
+				alert('内容不可超过1000字！');
+				return;
+			}
+		}
+		var dataObj = $("#form1").serialize();
+		request.addXJ(dataObj,function(data){
+				if(data.result==1){
+					alert(data.msg);
+				}else{
+					alert(data.msg);
+				}
+			},function(e){
+				alert(e);
+			},function(){
+				var aaa;
+	    	},function(){
+	    		var bbb;
+	    	});
+	}
+</script>
+
+</head>
+<body id="main">
+<header class="appTop">
+<div class="hLeft"><a href="../index.html"><i class="hBtn icoBack"></i></a></div>
+<div class="hRight"><a href="my.html"><i class="hBtn icoMailbox"></i></a></div>
+<h1>12345市长热线</h1>
+</header>
+<form name="form1" id="form1" method="post">
+<div class="appTopfixH"></div>
+<div class="appTopnav">
+    <ul>
+        <li><a href="#" onClick="tabselect(this,2)" class="select"><strong>我要咨询</strong></a></li>
+        <li><a href="#" onClick="tabselect(this,3)"><strong>我要建议</strong></a></li>
+        <li><a href="#" onClick="tabselect(this,4)"><strong>我要投诉</strong></a></li>
+    </ul>
+</div>
+<input type="hidden" name="xz" id="xz" value="2"/>
+<input type="hidden" name="linktel" id="linktel"/>
+<div class="appTopnavfixH"></div>
+<article class="appBody">
+	<div class="writeList">
+    	<dl class="wListli">
+        	<label for="name">
+        	<dt>姓名</dt>
+            <dd><input type="text" id="name" name="name" placeholder="请填写您的姓名" /></dd>
+            </label>
+        </dl>
+    	<dl class="wListli">
+        	<label for="sex">
+        	<dt>性别</dt>
+            <dd><select id="sex" name="sex">
+              <option value="0" selected=selected>男</option>
+              <option value="1">女</option>
+          </select></dd>
+            </label>
+        </dl>
+    </div>
+	<div class="writeList">
+    	<dl class="wListli">
+        	<label for="opentype">
+        	<dt>信息公开</dt>
+            <dd><select id="opentype" name="opentype">
+              <option value="0" selected=selected>公开</option>
+              <option value="1">不公开</option>
+          </select></dd>
+            </label>
+        </dl>
+    </div>
+	<div class="writeList">
+    	<dl class="wListli">
+        	<label for="zt">
+        	<dt>信件标题</dt>
+            <dd><input type="text" id="zt" name="zt" placeholder="请填写简要标题" /></dd>
+            </label>
+        </dl>
+    	<dl class="wListli">
+        	<label for="letternote">
+        	<dt>内容</dt>
+            <dd><textarea id="letternote" name="letternote" placeholder="请输入内容，不超过1000字，写明所在区县"></textarea></dd>
+            </label>
+        </dl>
+    </div>
+</article>
+<div class="appFooter">
+	<a class="fBtn submit" href="#" onclick="doSave()">提交</a>
+</div>
+<div class="appFooterfixH"></div>
+</form>
+</body>
+<script type="text/javascript" src="../js/custom-jqm-defaults.js" ></script>
+<script type="text/javascript" src="../js/common.js" ></script>
+<script type="text/javascript" src="../js/requestdata2.js" ></script>
+<script type="text/javascript" src="../js/cordova.js" ></script>
+<script type="text/javascript" src="../js/global.js" ></script>
+</html>

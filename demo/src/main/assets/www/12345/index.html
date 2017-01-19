@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>市长热线</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="skins/default/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/pageui.js"></script>
+	<!--兼容IE9以下html5的支持-->
+	<script type="text/javascript" src="js/html5.js"></script>
+</head>
+<body>
+	<!--**************************************首页列表*********************************************-->
+	<div data-role="page" id="main" >
+		<header class="appTop" style="z-index:99999">
+				<div class="hLeft"><a href="#" onclick="exitApp();"><i class="hBtn icoBack"></i></a></div>
+				<div class="hRight" style="margin-left:-52px;">
+					<a href="html/write.html" data-ajax="false" ><i class="hBtn icoWrite"></i></a>
+					<a href="html/my.html" data-ajax="false"><i class="hBtn icoMailbox"></i></a></div>
+				<h1>12345市长热线</h1>
+		</header>
+		<div class="appTopfixH"></div>
+		<article class="appBody">
+			<div data-role="content" class="content" >
+				<ul data-role="listview" data-inset="true" id="mainul" class="rows appList">
+					<li style="display:none;" >
+	           			 <h4 class="listTitle"><a href="#"></a></h4>
+	           			 <div class="listOther clearfix"><p></p><span id="fromtime"></span></div>
+	       		    </li>
+				</ul>
+				
+			     <div class="loadMore"><a href="#" onclick="mainlist()" id="loadingOne" ></a></div>
+			    
+			</div>
+			<input id="globalNum" type="hidden" value="1"  />
+		</article>
+	</div>
+
+
+
+	<!--**************************************首页详情**********************************************-->
+	<div data-role="page" id="mainDetail" >
+		<header class="appTop">
+		<div class="hLeft"><a href="index.html"><i class="hBtn icoBack"></i></a></div>
+		<div class="hRight" style="margin-left:-104px;"><a href="html/write.html"><i class="hBtn icoWrite"></i></a><a href="html/my.html"><i class="hBtn icoMailbox"></i></a></div>
+		<h1>12345市长热线</h1>
+		</header>
+		<div class="appTopfixH"></div>
+		<article class="appBody">
+			<div class="itemTop"><h4>基本信息</h4></div>
+		    <div class="itemBody">
+		    	<div class="title"><h3 id="title"></h3></div>
+		        <div class="content" id="content">
+		        </div>
+		        <div class="other clearfix">
+		        	<p id="name">骆驼祥子</p><span id="ftime">2014-01-01</span>
+		        </div>
+		    </div>
+			<div class="itemTop" id="handle"><h4>办理信息</h4></div>
+		    <div class="itemBody" id="handlediv">
+		        <div class="content">
+		        </div>
+		        <div class="other clearfix" >
+		       		<p id="handleunit"></p><span id="handlecontent">2013-11-03 10:03:43</span>
+		        </div>
+		    </div>
+		</article>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js" ></script>
+<script type="text/javascript" src="js/custom-jqm-defaults.js" ></script>
+<script type="text/javascript" src="js/common.js" ></script>
+<script type="text/javascript" src="js/requestdata.js" ></script>
+<script type="text/javascript" src="js/cordova.js" ></script>
+<script type="text/javascript" src="js/global.js" ></script>
+</head>
+<body>
+<header class="appTop">
+<div class="hLeft"><a href="index.html"><i class="hBtn icoBack"></i></a></div>
+<div class="hRight" style="margin-left:-104px;"><a href="html/write.html"><i class="hBtn icoWrite"></i></a><a href="html/my.html"><i class="hBtn icoMailbox"></i></a></div>
+<h1>12345市长热线</h1>
+<script type="text/javascript">
+	var newsId = "";
+	//页面创建时，pageNumber 设置为 1
+	$(document).on("pagecreate","#main",function(){
+		pageNumber = 1;
+	});
+
+	//加载列表数据
+	$(document).on("pageshow","#main",function(){
+		var global = $("#globalNum").val();
+		if(global==1){
+			mainlist();
+		}
+		$("#globalNum").val(2);
+	});
+
+	//加载详情数据
+	$(document).on("pageshow","#mainDetail",function(){
+		maininfo(newsId);
+	});
+	
+	//受理件回复列表
+	function mainlist(){
+		var $_ul = $("#mainul");
+		var $_li = $("#mainul").find("li:first");
+		request.sljList(pageNumber,function(array){
+	    		if(array!=null&&array.rows.length>0){
+		    		$(array.rows).each(function(index,obj){
+		    			var $_newOneli = $_li.clone();
+		    			var zt = obj.zt;
+		    			if(zt!=null&&zt.length>10){
+		    				zt = zt.substring(0,10);
+		    				zt += "...";
+		    			}
+		    			if(zt==null||zt==""){
+		    				
+		    				if(obj.letternote!=null){
+		    					if(obj.letternote.length>10){
+		    						zt=obj.letternote.substring(0,10);
+		    						zt += "...";
+		    					}else{
+		    						zt=obj.letternote;
+		    					}
+		    				}else{
+		    					zt += "无标题";
+		    				}
+		    			}
+		    			$_newOneli.find("a").attr("onclick","goDetail('"+obj.id+"')");
+		    			$_newOneli.find("a").text(zt);
+		    			$_newOneli.find("#fromtime").text(obj.fromtime);
+		    			$_newOneli.find("p").text(obj.name);
+		    			$_newOneli.show();
+		    			$_ul.append($_newOneli).listview("refresh");
+		    		});
+					$("#loadingOne").text("点击加载更多");
+	    		}else{
+	    			if(pageNumber==1){
+	    				$("#loadingOne").text("无受理单");
+	    			}
+	    			$("#loadingOne").text("全部加载完毕");
+	    		}
+	    	},function(e){
+	    		alert(e);
+	    	},function(){
+	    		showLoader();
+	    	},function(){
+	    		hideLoader();
+	    		pageNumber = pageNumber + 1;
+	    	});
+	}
+
+	//详细信息
+	function maininfo(id){
+		request.sljinfo(id,function(model){
+			var zt = model.obj.zt;
+			if(zt!=null&&zt.length>10){
+				zt = zt.substring(0,10);
+				zt += "...";
+			}
+			if(zt==null||zt==""){
+				if(model.obj.letternote!=null){
+					if(model.obj.letternote.length>10){
+						zt=model.obj.letternote.substring(0,10);
+						zt += "...";
+					}else{
+						zt=model.obj.letternote;
+					}
+				}else{
+					zt += "无标题";
+				}
+			}
+			$("#title").text(zt);
+			$("#ftime").text(model.obj.fromtime);
+			$("#content").html(model.obj.letternote);
+			$("#name").text(model.obj.name);
+			if(model.flag3==null){
+				$("#handle").hide();
+				$("#handlediv").hide();
+			}else{
+				$("#handlediv").find("div").eq(0).text(model.flag3.handleobj.handlenote);
+				$("#handlediv").find("div").eq(1).find("p").text(model.flag3.unit);
+				$("#handlediv").find("div").eq(1).find("span").text(model.flag3.handleobj.handledate);
+			}
+		},function(e){
+			alert(e);
+		});
+	}
+
+	//跳转到详情页
+	function goDetail(id){
+		newsId = id;
+		$.mobile.changePage("#mainDetail",{transition:"none"});
+	}
+	
+</script>
+</html>

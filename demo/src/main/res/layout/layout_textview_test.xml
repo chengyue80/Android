@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/web_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_textView_test"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#009fff"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:scrollbars="vertical"
+        android:text="周星驰（11111111），生于香港，英文名Stephen　你Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Chow，著名电影演员，兼导演、编剧、电影监制以及电影制作人。曾与吴孟达是“黄金搭档”，曾主演《九品芝麻官》、《大话西游》、《食神》等多部喜剧影片，自导自演《喜剧之王》《功夫》等影片……"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv_textView_test2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#003fff"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:scrollbars="vertical"
+        android:text="周星驰周星驰周星驰周星驰周星驰周星驰周星驰周SSSSSSSSSSSSSSSSS星驰周星驰周星驰(1962年6月22日-) ，生于香港，英文名  St ephen　你好 Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Stephen　Chow，著名电影演员，兼导演、编剧、电影监制以及电影制作人。曾与吴孟达是“黄金搭档”，曾主演《九品芝麻官》、《大话西游》、《食神》等多部喜剧影片，自导自演《喜剧之王》《功夫》等影片……周星驰（1962年6月22日—），生于香港，英文名Stephen　Chow，著名电影演员，兼导演、编剧、电影监制以及电影制作人。曾与吴孟达是“黄金搭档”，曾主演《九品芝麻官》、《大话西游》、《食神》等多部喜剧影片，自导自演《喜剧之王》《功夫》等影片……"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+</LinearLayout>

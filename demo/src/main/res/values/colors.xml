@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 导航栏颜色 -->
+    <color name="navi_top">#2da8f1</color>
+    <color name="red">#ff0000</color>
+    <color name="blue">#0000ff</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#FF7B7676</color>
+    <color name="setting_bg">#ffdde4f4</color>
+    <color name="setting_text">#ff365183</color>
+    <color name="help_text">#ff365183</color>
+    <color name="sms_text_read">#ffb21e</color>
+    <color name="home_bottom">#8b9dc4</color>
+    <color name="guide_text">#2a4690</color>
+    <color name="guide_bold">#df8002</color>
+    <color name="guide_background">#eff3f6</color>
+    <color name="guide_titlebar">#8CA5D5</color>
+    <color name="guide_widget_howto">#74a5cd</color>
+    <color name="send_sms_edit">#f5f7fc</color>
+    <color name="contact_number_text">#818182</color>
+    <color name="sms_edit_text">#182b3f</color>
+    <color name="sms_receive_text">#d1d2fe</color>
+    <color name="auto_dial_color">#e77f0f</color>
+    <color name="sms_edit_count_color">#6b798e</color>
+    <color name="r_text_gray_color">#ffa1a1a2</color>
+    <color name="r_text_blue_color">#0052a8f0</color>
+    <color name="r_text_white_color">#FFFFFFFF</color>
+    <color name="contact_recent_color">#1a191c</color>
+    <color name="setting_high_text_color">#FF56b2ff</color>
+    <color name="light_blue">#367de9</color>
+    <color name="summary">#bebebe</color>
+    <!-- 副标题文字的颜色 -->
+    <color name="currentposition_and_source">#465e81</color>
+    <!-- 提示 -->
+    <color name="help_tip">#83c801</color>
+    <!-- 子描述 -->
+    <color name="help_content">#0794e5</color>
+    <color name="eg_zhu">#ffa2a2a2</color>
+    <!-- 高亮下的字体颜色 -->
+    <color name="none">#00000000</color>
+    <color name="select_green">#5CCE06</color>
+    <color name="line_color">#535353</color>
+    <color name="button_color">#04141e</color>
+    <color name="multi_bg">#061636</color>
+    <color name="translucent_background">#e0000000</color>
+
+    <!-- FrameLayout 定义一组色彩 -->
+    <color name="color1">#ff0000</color>
+    <color name="color2">#00ff00</color>
+    <color name="color3">#0000ff</color>
+    <color name="color4">#ffff00</color>
+    <color name="color5">#ff00ff</color>
+    <color name="color6">#00ffff</color>
+
+    <!-- CircleImageView -->
+    <color name="dark">#FF222222</color>
+    <color name="light">#FFEEEEEE</color>
+
+    <!-- 滚轮 -->
+    <color name="orange">#ff8a01</color>
+    <color name="deep_gray">#666666</color>
+    <color name="light_gray">#b3b3b3</color>
+    <color name="province_line_border">#C7C7C7</color>
+
+</resources>
