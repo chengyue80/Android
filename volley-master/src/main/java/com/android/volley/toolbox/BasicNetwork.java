@@ -26,6 +26,7 @@ import com.android.volley.Network;
 import com.android.volley.NetworkError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.NoConnectionError;
+import com.android.volley.RedirectError;
 import com.android.volley.Request;
 import com.android.volley.RetryPolicy;
 import com.android.volley.ServerError;
@@ -119,6 +120,12 @@ public class BasicNetwork implements Network {
                             SystemClock.elapsedRealtime() - requestStart);
                 }
 
+                // Handle moved resources
+                if (statusCode == HttpStatus.SC_MOVED_PERMANENTLY || statusCode == HttpStatus.SC_MOVED_TEMPORARILY) {
+                    String newUrl = responseHeaders.get("Location");
+                    request.setRedirectUrl(newUrl);
+                }
+
                 // Some responses such as 204s do not have content.  We must check.
                 if (httpResponse.getEntity() != null) {
                   responseContents = entityToBytes(httpResponse.getEntity());
@@ -155,7 +162,11 @@ public class BasicNetwork implements Network {
                 if (responseContents != null) {
                     networkResponse = new NetworkResponse(statusCode, responseContents,
                             responseHeaders, false, SystemClock.elapsedRealtime() - requestStart);
-                    if (statusCode == HttpStatus.SC_UNAUTHORIZED ||
+                    if (statusCode == HttpStatus.SC_MOVED_PERMANENTLY ||
+                            statusCode == HttpStatus.SC_MOVED_TEMPORARILY) {
+                        attemptRetryOnException("redirect",
+                                request, new RedirectError(networkResponse));
+                    } else if (statusCode == HttpStatus.SC_UNAUTHORIZED ||
                             statusCode == HttpStatus.SC_FORBIDDEN) {
                         attemptRetryOnException("auth",
                                 request, new AuthFailureError(networkResponse));
