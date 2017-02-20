@@ -53,16 +53,11 @@ public class StringRequest extends Request<String> {
      */
     public StringRequest(String url, Listener<String> listener, ErrorListener errorListener) {
         this(Method.GET, url, listener, errorListener);
-
-
-
     }
 
     @Override
     protected void onFinish() {
         super.onFinish();
-
-
         mListener = null;
     }
 
