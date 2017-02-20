@@ -53,6 +53,11 @@
     <!-- 指定添加安装快捷方式的权限 -->
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--闹钟权限-->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <!--日历读写权限-->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
     <!-- 百度地图 -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
@@ -253,6 +258,10 @@
         <activity
             android:name="com.yue.demo.other.IatDemo"
             android:label="@string/demo_other_name_speech">
+        </activity>
+        <activity
+            android:name="com.yue.demo.other.AlarmClockDemo"
+            android:label="@string/demo_other_name_alarm">
         </activity>
 
         <!-- UI -->
@@ -678,9 +687,9 @@
             android:name="com.yue.demo.service.aidl.AidlClient"
             android:label="调用远程Service">
         </activity>
-        <service android:name="com.yue.demo.service.aidl.AidlService" >
+        <service android:name="com.yue.demo.service.aidl.AidlService">
             <intent-filter>
-                <action android:name="com.yue.demo.action.AIDL_SERVICE" />
+                <action android:name="com.yue.demo.action.AIDL_SERVICE"/>
             </intent-filter>
         </service>
         <activity

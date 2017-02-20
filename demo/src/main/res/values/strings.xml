@@ -368,6 +368,8 @@
     <string name="demo_other_title_mdsha1">获取应用的MD5 和 sha1信息</string>
     <string name="demo_other_name_speech">讯飞语音</string>
     <string name="demo_other_title_speech">语音听写、语义理解</string>
+    <string name="demo_other_name_alarm">闹钟、日历</string>
+    <string name="demo_other_title_alarm">新建、查看闹钟；日历新建查看</string>
 
     <!-- com.yue.android.demo.net -->
     <string name="demo_net_name_systemDownload">System download</string>
