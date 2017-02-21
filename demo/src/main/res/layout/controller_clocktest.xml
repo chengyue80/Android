@@ -8,6 +8,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:dial="@drawable/watch"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
         android:hand_minute="@drawable/hand" />
 
     <DigitalClock

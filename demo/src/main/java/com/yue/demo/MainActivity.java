@@ -52,27 +52,6 @@ public class MainActivity extends RootActivity {
 
 	private static Context mContext;
 
-	// @TargetApi(Build.VERSION_CODES.KITKAT)
-	// @Override
-	// protected void onCreate(Bundle icicle) {
-	// super.onCreate(icicle);
-	// setContentView(R.layout.main);
-	// mContext = getApplicationContext();
-	//
-	// ListView mListView = (ListView) findViewById(R.id.listView);
-	// // 添加ListItem，设置事件响应
-	// mListView.setAdapter(new DemoListAdapter(this, demos));
-	// mListView.setOnItemClickListener(new OnItemClickListener() {
-	// public void onItemClick(AdapterView<?> arg0, View v, int index,
-	// long arg3) {
-	// onListItemClick(index);
-	// }
-	// });
-	//
-	// initSDKService();
-	//
-	// }
-
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);

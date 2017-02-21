@@ -1,6 +1,5 @@
 package com.yue.demo.ui.view;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -16,8 +15,9 @@ import android.widget.Toast;
 import android.widget.ZoomButton;
 
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
-public class ImageTestActivity extends Activity {
+public class ImageTestActivity extends RootActivity {
 
     private ImageView img, smallImage;
     private Bitmap bitmap;
