@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.iflytek.android.framework.annotation.ViewInject;
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
-public class EmailActivity extends BaseActivity {
+public class EmailActivity extends RootActivity {
 	@ViewInject(id = R.id.button1, listenerName = "onClick", methodName = "OnClick")
 	private Button sendBtn;
 	@ViewInject(id = R.id.button2, listenerName = "onClick", methodName = "OnClick")

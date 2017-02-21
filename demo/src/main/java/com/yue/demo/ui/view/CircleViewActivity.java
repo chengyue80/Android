@@ -1,24 +1,21 @@
 package com.yue.demo.ui.view;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.iflytek.android.framework.annotation.ViewInject;
-import com.iflytek.android.framework.base.BaseActivity;
 import com.iflytek.android.framework.base.BaseFragment;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
 /**
  * 
  * @author chengyue
  * 
  */
-public class CircleViewActivity extends BaseActivity {
+public class CircleViewActivity extends RootActivity {
 	
 	
 

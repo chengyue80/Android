@@ -13,7 +13,6 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.activity.MainActivity_Activity;
 import com.yue.demo.content.MainActivity_Provider;
 import com.yue.demo.desktop.MainActivity_Desktop;
@@ -32,14 +31,13 @@ import com.yue.demo.res.MainActivity_Res;
 import com.yue.demo.sensor.MainActivity_Sensor;
 import com.yue.demo.service.MainActivity_Service;
 import com.yue.demo.ui.MainActivity_UI;
-import com.yue.demo.util.LogUtil;
 
 /**
  * 程序入口，导航到各个二级MainActivity
  * 
  * @author chengyue
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends RootActivity {
 
 	private final String TAG = MainActivity.class.getSimpleName();
 
@@ -75,11 +73,10 @@ public class MainActivity extends BaseActivity {
 	//
 	// }
 
-	protected void onCreate(Bundle savedInstanceState, boolean translucent) {
-		super.onCreate(savedInstanceState, true);
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		mContext = getApplicationContext();
-		LogUtil.d(TAG, "translucent : " + translucent);
 		ListView mListView = (ListView) findViewById(R.id.listView);
 		// 添加ListItem，设置事件响应
 		mListView.setAdapter(new DemoListAdapter(this, demos));
@@ -182,5 +179,4 @@ public class MainActivity extends BaseActivity {
 		Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
 		Looper.loop();
 	}
-
 }

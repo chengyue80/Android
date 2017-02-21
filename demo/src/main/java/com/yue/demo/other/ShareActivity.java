@@ -1,11 +1,6 @@
 package com.yue.demo.other;
 
-import java.io.File;
-import java.util.HashMap;
-
 import android.content.Context;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -13,6 +8,15 @@ import android.os.Environment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import com.iflytek.android.framework.annotation.ViewInject;
+import com.yue.demo.R;
+import com.yue.demo.RootActivity;
+import com.yue.demo.util.LogUtil;
+
+import java.io.File;
+import java.util.HashMap;
+
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
 import cn.sharesdk.framework.ShareSDK;
@@ -20,12 +24,7 @@ import cn.sharesdk.onekeyshare.OnekeyShare;
 import cn.sharesdk.onekeyshare.OnekeyShareTheme;
 import cn.sharesdk.sina.weibo.SinaWeibo;
 
-import com.iflytek.android.framework.annotation.ViewInject;
-import com.iflytek.android.framework.base.BaseActivity;
-import com.yue.demo.R;
-import com.yue.demo.util.LogUtil;
-
-public class ShareActivity extends BaseActivity {
+public class ShareActivity extends RootActivity {
 
 	private final String TAG = ShareActivity.class.getSimpleName();
 	@ViewInject(id = R.id.button1, listenerName = "onClick", methodName = "onClick")

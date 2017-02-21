@@ -1,18 +1,16 @@
 package com.yue.demo.graphics;
 
-import com.iflytek.android.framework.base.BaseActivity;
-import com.yue.demo.R;
-import com.yue.demo.DemoInfo;
-import com.yue.demo.DemoListAdapter;
-
-import android.app.LauncherActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+import com.yue.demo.DemoInfo;
+import com.yue.demo.DemoListAdapter;
+import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
 /**
  * 图形与图像处理
@@ -20,7 +18,7 @@ import android.widget.AdapterView.OnItemClickListener;
  * @author chengyue
  * 
  */
-public class MainActivity_Graphics extends BaseActivity {
+public class MainActivity_Graphics extends RootActivity {
 
 	public static final String Tag = "graphics >> ";
 

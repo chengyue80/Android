@@ -8,10 +8,10 @@ import android.widget.Chronometer.OnChronometerTickListener;
 import android.widget.TextView;
 
 import com.iflytek.android.framework.annotation.ViewInject;
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
-public class ClockTestActivity extends BaseActivity {
+public class ClockTestActivity extends RootActivity {
 
 	@ViewInject(id = R.id.tv_CountDownTimer)
 	private TextView countDownTimer;

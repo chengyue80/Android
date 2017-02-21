@@ -7,10 +7,10 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.DemoInfo;
 import com.yue.demo.DemoListAdapter;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
 /**
  * 多媒体应用开发
@@ -18,7 +18,7 @@ import com.yue.demo.R;
  * @author chengyue
  * 
  */
-public class MainActivity_Media extends BaseActivity {
+public class MainActivity_Media extends RootActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

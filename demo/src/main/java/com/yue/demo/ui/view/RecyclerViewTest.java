@@ -2,10 +2,10 @@ package com.yue.demo.ui.view;
 
 import android.os.Bundle;
 
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
-public class RecyclerViewTest extends BaseActivity{
+public class RecyclerViewTest extends RootActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -16,8 +16,9 @@ import android.widget.Toast;
 
 import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
-public class MainActivity_Dialog extends BaseActivity {
+public class MainActivity_Dialog extends RootActivity {
 	private Button dialog_simpleBtn, dialog_simpleListBtn, dialog_singleChoice,
 			dialog_multiChoice, dialog_myAdapter, dialog_myDialog;
 	// private Button login;

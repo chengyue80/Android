@@ -1,5 +1,15 @@
 package com.yue.demo.other;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.Signature;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import com.yue.demo.RootActivity;
+import com.yue.demo.util.LogUtil;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.security.MessageDigest;
@@ -8,24 +18,13 @@ import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.pm.Signature;
-import android.os.Bundle;
-import android.widget.TextView;
-
-import com.iflytek.android.framework.base.BaseActivity;
-import com.iflytek.android.framework.util.MD5Util;
-import com.yue.demo.util.LogUtil;
-
 /**
  * 获取应用的MD5 和 sha1信息
  * 
  * @author chengyue
  * 
  */
-public class MDSha1Demo extends BaseActivity {
+public class MDSha1Demo extends RootActivity {
 
 	TextView text = null;
 

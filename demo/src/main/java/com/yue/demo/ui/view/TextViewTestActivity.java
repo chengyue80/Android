@@ -6,10 +6,10 @@ import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.widget.TextView;
 
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
-public class TextViewTestActivity extends BaseActivity implements OnClickListener {
+public class TextViewTestActivity extends RootActivity implements OnClickListener {
 
 	private TextView textView1, textView2;
 

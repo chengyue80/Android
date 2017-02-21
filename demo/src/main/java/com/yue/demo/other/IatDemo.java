@@ -37,6 +37,7 @@ import com.iflytek.cloud.util.ContactManager.ContactListener;
 import com.iflytek.speech.util.JsonParser;
 import com.iflytek.sunflower.FlowerCollector;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 import com.yue.demo.util.LogUtil;
 
 /**
@@ -45,7 +46,7 @@ import com.yue.demo.util.LogUtil;
  * @author chengyue
  * 
  */
-public class IatDemo extends BaseActivity implements OnClickListener {
+public class IatDemo extends RootActivity implements OnClickListener {
 	private static String TAG = IatDemo.class.getSimpleName();
 	// 语音听写对象
 	private SpeechRecognizer mIat;

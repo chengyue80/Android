@@ -45,6 +45,6 @@ repositories {
 
 dependencies {
     compile project(':xunplayer')
-    compile project(':IAF')
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:21.0.3'
 }

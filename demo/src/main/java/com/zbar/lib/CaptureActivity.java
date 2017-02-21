@@ -1,7 +1,5 @@
 package com.zbar.lib;
 
-import java.io.IOException;
-
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Point;
@@ -23,16 +21,18 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 import com.zbar.lib.camera.CameraManager;
 import com.zbar.lib.decode.CaptureActivityHandler;
 import com.zbar.lib.decode.InactivityTimer;
 
+import java.io.IOException;
+
 /**
  * 扫描界面
  */
-public class CaptureActivity extends BaseActivity implements Callback {
+public class CaptureActivity extends RootActivity implements Callback {
 
 	/**
 	 * 返回键

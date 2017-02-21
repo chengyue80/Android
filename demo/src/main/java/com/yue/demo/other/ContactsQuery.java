@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.widget.Toast;
 
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 
 /**
  * ClassName: ContactsQuery <br/>
@@ -19,7 +19,7 @@ import com.yue.demo.R;
  * @version 
  * @since JDK 1.6
  */
-public class ContactsQuery extends BaseActivity{
+public class ContactsQuery extends RootActivity {
 
 	
 	@Override

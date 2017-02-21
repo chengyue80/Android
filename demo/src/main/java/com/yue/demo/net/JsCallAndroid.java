@@ -1,13 +1,6 @@
 package com.yue.demo.net;
 
-import java.io.File;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,13 +14,16 @@ import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.iflytek.android.framework.base.BaseActivity;
 import com.yue.demo.MainActivity;
 import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 import com.yue.demo.util.LogUtil;
 import com.zbar.lib.CaptureActivity;
 
-public class JsCallAndroid extends BaseActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class JsCallAndroid extends RootActivity {
 
 	private WebView webView;
 

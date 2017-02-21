@@ -1,6 +1,5 @@
 package com.yue.demo.io;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -15,9 +14,9 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.iflytek.android.framework.base.BaseActivity;
-import com.yue.demo.R;
 import com.yue.demo.MainActivity;
+import com.yue.demo.R;
+import com.yue.demo.RootActivity;
 import com.yue.demo.util.LogUtil;
 
 /**
@@ -26,7 +25,7 @@ import com.yue.demo.util.LogUtil;
  * @author chengyue
  * 
  */
-public class GestrueTest extends BaseActivity implements OnGestureListener {
+public class GestrueTest extends RootActivity implements OnGestureListener {
 
 	private static final String Tag = GestrueTest.class.getSimpleName();
 
