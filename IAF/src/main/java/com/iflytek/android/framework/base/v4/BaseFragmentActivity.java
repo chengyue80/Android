@@ -40,16 +40,13 @@ public class BaseFragmentActivity extends FragmentActivity {
 	}
 
 	protected void onStop() {
-		SingleRequestQueen.getInstance(this).quitRequest(this);
-
 		super.onStop();
 	}
 
 	protected void onDestroy() {
 		super.onDestroy();
-
 		BaseInject.getInstance().unEventInject(this);
-
+		SingleRequestQueen.getInstance(this).quitRequest(this);
 		this.at.removeActivity(this);
 	}
 

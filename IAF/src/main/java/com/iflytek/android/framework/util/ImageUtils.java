@@ -1,5 +1,11 @@
 package com.iflytek.android.framework.util;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,15 +13,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
-
-import com.nostra13.universalimageloader.core.ImageLoader;
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.widget.ImageView;
 
 /**
  * ImageUtils 图片工具类，可用于Bitmap, byte array, Drawable之间进行转换以及图片缩放
@@ -98,7 +95,6 @@ public class ImageUtils {
 	 * @param imageUrl
 	 * @param readTimeOutMillis
 	 * @return
-	 * @see ImageUtils#getInputStreamFromUrl(String, int, boolean)
 	 */
 	public static InputStream getInputStreamFromUrl(String imageUrl,
 			int readTimeOutMillis) {
@@ -146,8 +142,8 @@ public class ImageUtils {
 	 * 
 	 * @param imageUrl
 	 * @param readTimeOutMillis
-	 * @return
-	 * @see ImageUtils#getDrawableFromUrl(String, int, boolean)
+	 * @return Drawable
+	 * @see ImageUtils#getDrawableFromUrl(String, int, Map)
 	 */
 	public static Drawable getDrawableFromUrl(String imageUrl,
 			int readTimeOutMillis) {
@@ -162,7 +158,7 @@ public class ImageUtils {
 	 *            read time out, if less than 0, not set, in mills
 	 * @param requestProperties
 	 *            http request properties
-	 * @return
+	 * @return Drawable
 	 */
 	public static Drawable getDrawableFromUrl(String imageUrl,
 			int readTimeOutMillis, Map<String, String> requestProperties) {
@@ -178,8 +174,7 @@ public class ImageUtils {
 	 * 
 	 * @param imageUrl
 	 * @param readTimeOut
-	 * @return
-	 * @see ImageUtils#getBitmapFromUrl(String, int, boolean)
+	 * @return Bitmap
 	 */
 	public static Bitmap getBitmapFromUrl(String imageUrl, int readTimeOut) {
 		return getBitmapFromUrl(imageUrl, readTimeOut, null);
@@ -191,7 +186,7 @@ public class ImageUtils {
 	 * @param imageUrl
 	 * @param requestProperties
 	 *            http request properties
-	 * @return
+	 * @return Bitmap
 	 */
 	public static Bitmap getBitmapFromUrl(String imageUrl, int readTimeOut,
 			Map<String, String> requestProperties) {
@@ -204,14 +199,8 @@ public class ImageUtils {
 		closeInputStream(stream);
 		return b;
 	}
-	/**
-	 * 加载网络图片
-	 * @param imageView
-	 * @param uri
-	 */
-	public static void LoadImageFromUrl(ImageView imageView,String uri){
-		ImageLoader.getInstance().displayImage(uri, imageView);
-	}
+
+
 
 	/**
 	 * scale image
@@ -219,7 +208,7 @@ public class ImageUtils {
 	 * @param org
 	 * @param newWidth
 	 * @param newHeight
-	 * @return
+	 * @return Bitmap
 	 */
 	public static Bitmap scaleImageTo(Bitmap org, int newWidth, int newHeight) {
 		return scaleImage(org, (float) newWidth / org.getWidth(),
@@ -234,7 +223,7 @@ public class ImageUtils {
 	 *            sacle of width
 	 * @param scaleHeight
 	 *            scale of height
-	 * @return
+	 * @return Bitmap
 	 */
 	public static Bitmap scaleImage(Bitmap org, float scaleWidth,
 			float scaleHeight) {

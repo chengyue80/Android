@@ -1,9 +1,9 @@
 package com.iflytek.android.framework.base;
 
-import com.iflytek.android.framework.annotation.BaseInject;
-
 import android.app.Fragment;
 import android.os.Bundle;
+
+import com.iflytek.android.framework.annotation.BaseInject;
 /**
  * 基本Frament 界面初始化工作请再onActivityCreated中进行
  * com.iflytek.android.framework.base.BaseFragment
@@ -16,7 +16,6 @@ public class BaseFragment extends Fragment {
 	 */
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		initBaseInject(this);
 		super.onActivityCreated(savedInstanceState);
 	}
