@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <!-- 全局dialog权限 -->
@@ -16,8 +15,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 录音权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <!-- 在SDCard中创建与删除文件权限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <!-- 添加操作闪光灯的权限 -->
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
     <!-- 添加操作振动器的权限 -->
@@ -56,26 +53,8 @@
     <!--闹钟权限-->
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
     <!--日历读写权限-->
-    <uses-permission android:name="android.permission.READ_CALENDAR" />
-    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
-
-    <!-- 百度地图 -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-
-    <!-- VitamioDemo -->
-    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" /> -->
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -84,21 +63,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
-    <!-- ShareSDK 权限 -->
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <!-- 蓝牙分享所需的权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
@@ -110,75 +78,16 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
-        <!-- 移动统计分析 -->
-        <meta-data
-            android:name="IFLYTEK_APPKEY"
-            android:value="'563453a9'"/>
-        <meta-data
-            android:name="IFLYTEK_CHANNEL"
-            android:value="Android_Demo"/>
         <!-- app入口 -->
         <activity
             android:name="com.yue.demo.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
+                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.zbar.lib.CaptureActivity"
-            android:label="扫一扫">
-        </activity>
-        ˚
-        <!-- 百度地图 -->
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="IE5Pk1ZiIk15NmRxccUbNlN8"/>
-
-        <!-- 添加activity信息（注意：tencent后面的appid要保持和您配置的QQ的appid一致） -->
-        <activity
-            android:name="com.mob.tools.MobUIShell"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:windowSoftInputMode="stateHidden|adjustResize">
-            <intent-filter>
-                <data android:scheme="tencent100371282"/>
-
-                <action android:name="android.intent.action.VIEW"/>
-
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-
-        <!-- 微信分享回调 -->
-        <activity
-            android:name=".wxapi.WXEntryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-
-        <!-- 调用新浪原生SDK，需要注册的回调activity -->
-        <activity
-            android:name="cn.sharesdk.sina.weibo.SinaActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar">
-            <intent-filter>
-                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-
-        <!-- 支付宝分享回调 -->
-        <activity
-            android:name=".apshare.ShareEntryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
         <!-- other activity -->
         <activity
@@ -248,16 +157,8 @@
             android:label="@string/demo_other_name_code">
         </activity>
         <activity
-            android:name="com.yue.demo.other.ShareActivity"
-            android:label="@string/demo_other_name_share">
-        </activity>
-        <activity
             android:name="com.yue.demo.other.MDSha1Demo"
             android:label="@string/demo_other_name_mdsha1">
-        </activity>
-        <activity
-            android:name="com.yue.demo.other.IatDemo"
-            android:label="@string/demo_other_name_speech">
         </activity>
         <activity
             android:name="com.yue.demo.other.AlarmClockDemo"
@@ -438,21 +339,19 @@
             android:name="com.yue.demo.intent.SchemeActivity"
             android:label="SchemeActivity">
             <intent-filter>
-                <action android:name="com.yue.demo.intent.SchemeActivity">
-                    <category android:name="android.intent.category.DEFAULT"/>
-                    <!--
-                需要Intent的Data属性的scheme是lee、且host是www.fkjava.org 、
-                port是8888、且path是/mypath、且type是abc/xyz才可启动该Activity
-                    -->
-                    <!--
-                    android:host="www.fkjava.org"
-                    android:mimeType="abc/xyz"
-                    android:path="/mypath"
-                    android:port="8888"
-                    -->
-                    <data android:scheme="lee"/>
-                </action>
-                >
+                <action android:name="com.yue.demo.intent.SchemeActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!--
+            需要Intent的Data属性的scheme是lee、且host是www.fkjava.org 、
+            port是8888、且path是/mypath、且type是abc/xyz才可启动该Activity
+                -->
+                <!--
+                android:host="www.fkjava.org"
+                android:mimeType="abc/xyz"
+                android:path="/mypath"
+                android:port="8888"
+                -->
+                <data android:scheme="lee"/>
             </intent-filter>
         </activity>
         <activity
@@ -844,9 +743,6 @@
             android:name="com.yue.demo.net.ViewHtml"
             android:label="ViewHtml"/>
         <activity
-            android:name="com.yue.demo.net.JsCallAndroid"
-            android:label="JsCallAndroid"/>
-        <activity
             android:name="com.yue.demo.net.CallWs"
             android:label="基于CXF的Web Service"/>
         <activity
@@ -988,19 +884,7 @@
         <receiver android:name="com.yue.demo.gps.ProximityAlertReciever">
         </receiver>
 
-        <!-- 百度地图 -->
-        <activity
-            android:name="com.baidu.demo.MainActivity_Baidu"
-            android:label="百度地图demo">
-        </activity>
-        <activity
-            android:name="com.baidu.map.MainActivity_Map"
-            android:label="百度地图"
-            android:theme="@android:style/Theme.Black.NoTitleBar">
-        </activity>
-
-        <service android:name="com.yue.demo.service.AllService">
-        </service>
+        <service android:name="com.yue.demo.service.AllService"/>
     </application>
 
 </manifest>

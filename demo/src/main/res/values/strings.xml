@@ -362,8 +362,6 @@
     <string name="demo_other_title_draggable">DraggableGridView Item可拖动交换位置的GridView，类似桌面的单屏效果</string>
     <string name="demo_other_name_code">图形验证码</string>
     <string name="demo_other_title_code">图形验证码</string>
-    <string name="demo_other_name_share">ShareSDK</string>
-    <string name="demo_other_title_share">ShareSDK分享</string>
     <string name="demo_other_name_mdsha1">mdsha1</string>
     <string name="demo_other_title_mdsha1">获取应用的MD5 和 sha1信息</string>
     <string name="demo_other_name_speech">讯飞语音</string>

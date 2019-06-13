@@ -23,7 +23,7 @@ public class ClockTestActivity extends RootActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.controller_clocktest);
 		final Chronometer chr = (Chronometer) findViewById(R.id.controller_chrtest);
-		chr.setBase(SystemClock.elapsedRealtime());
+		chr.setBase(System.currentTimeMillis());
 
 		chr.setOnChronometerTickListener(new OnChronometerTickListener() {
 

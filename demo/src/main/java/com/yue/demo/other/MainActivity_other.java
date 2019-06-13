@@ -104,14 +104,8 @@ public class MainActivity_other extends Activity {
 			new DemoInfo(R.string.demo_other_name_code,
 					R.string.demo_other_title_code, ValidateCodeActivity.class),
 
-			new DemoInfo(R.string.demo_other_name_share,
-					R.string.demo_other_title_share, ShareActivity.class),
-
 			new DemoInfo(R.string.demo_other_name_mdsha1,
 					R.string.demo_other_title_mdsha1, MDSha1Demo.class),
-
-			new DemoInfo(R.string.demo_other_name_speech,
-					R.string.demo_other_title_speech, IatDemo.class),
 
 			new DemoInfo(R.string.demo_other_name_alarm,
 					R.string.demo_other_title_alarm, AlarmClockDemo.class),

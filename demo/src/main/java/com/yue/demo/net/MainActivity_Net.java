@@ -53,9 +53,6 @@ public class MainActivity_Net extends LauncherActivity {
 		case 6:
 			return new Intent(this, ViewHtml.class);
 
-		case 7:
-			return new Intent(this, JsCallAndroid.class);
-
 		case 8:
 			return new Intent(this, CallWs.class);
 
